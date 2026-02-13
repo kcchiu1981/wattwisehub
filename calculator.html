@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Electricity Cost Calculator | WattWiseHub</title>
+<meta name="description" content="Free electricity cost calculator. Estimate appliance energy usage and monthly electricity bill instantly.">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6f8;
+    text-align: center;
+    padding: 40px;
+}
+
+.container {
+    background: white;
+    max-width: 500px;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 12px 20px;
+    background: #0077ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+.result {
+    margin-top: 20px;
+    font-size: 18px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h1>Electricity Cost Calculator</h1>
+
+    <input type="number" id="watt" placeholder="Appliance Power (Watts)">
+    <input type="number" id="hours" placeholder="Hours per day">
+    <input type="number" id="price" placeholder="Electricity price per kWh (e.g. 0.12)">
+
+    <br>
+    <button onclick="calculate()">Calculate</button>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+function calculate() {
+    let watt = document.getElementById("watt").value;
+    let hours = document.getElementById("hours").value;
+    let price = document.getElementById("price").value;
+
+    if (!watt || !hours || !price) {
+        document.getElementById("result").innerHTML = "Please fill all fields.";
+        return;
+    }
+
+    let kwhPerDay = (watt * hours) / 1000;
+    let monthly = kwhPerDay * 30 * price;
+    let yearly = kwhPerDay * 365 * price;
+
+    document.getElementById("result").innerHTML =
+        "<b>Daily usage:</b> " + kwhPerDay.toFixed(2) + " kWh<br>" +
+        "<b>Monthly cost:</b> $" + monthly.toFixed(2) + "<br>" +
+        "<b>Yearly cost:</b> $" + yearly.toFixed(2);
+}
+</script>
+
+</body>
+</html>
