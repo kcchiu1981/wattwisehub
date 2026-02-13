@@ -3,167 +3,436 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Smart Thermostat Guide: What Actually Saves Money | WattWiseHub</title>
-  <meta name="description" content="A practical smart thermostat buying and setup guide. Learn which features reduce energy bills, how to set schedules, and avoid common mistakes." />
+  <title>Smart Thermostat Guide (Setup, Mistakes, Savings) | WattWiseHub</title>
+  <meta name="description" content="A practical smart thermostat guide: how to choose, install, and configure schedules for real savings—plus common mistakes and the best supporting upgrades (filters, sensors, draft sealing)." />
   <link rel="canonical" href="https://www.wattwisehub.com/guides/smart-thermostat-guide.html" />
+  <meta name="robots" content="index,follow" />
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Smart Thermostat Guide (Setup, Mistakes, Savings) | WattWiseHub" />
+  <meta property="og:description" content="Choose and configure a smart thermostat for real savings—avoid common mistakes and pair it with the right upgrades." />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Smart Thermostat Guide: What Actually Saves Money" />
-  <meta property="og:description" content="Features that save, setup that matters, and pitfalls to avoid." />
   <meta property="og:url" content="https://www.wattwisehub.com/guides/smart-thermostat-guide.html" />
+  <meta property="og:site_name" content="WattWiseHub" />
 
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#6b7280;
+      --border:#e5e7eb;
+      --card:#fafafa;
+      --link:#1f6feb;
+      --shadow: 0 1px 2px rgba(0,0,0,.05);
+      --radius:12px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.65;
+    }
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    header{
+      border-bottom:1px solid var(--border);
+      background:#fff;
+      position:sticky; top:0; z-index:10;
+    }
+    .container{ max-width:980px; margin:0 auto; padding:0 18px; }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .brand .dot{ width:10px; height:10px; border-radius:50%; background:#111827; display:inline-block; }
+    .nav-links{
+      display:flex; gap:14px; flex-wrap:wrap;
+      font-size:14px;
+    }
+    .nav-links a{ color:#111827; opacity:.9; }
+    .nav-links a:hover{ opacity:1; }
+
+    main{ padding:28px 0 56px; }
+    .crumbs{ font-size:13px; color:var(--muted); margin:8px 0 12px; }
+    .crumbs a{ color:var(--muted); }
+    h1{ line-height:1.2; margin:10px 0 6px; font-size:34px; }
+    .subhead{ color:var(--muted); margin:0 0 18px; }
+
+    .meta{
+      display:flex; gap:10px; flex-wrap:wrap;
+      color:var(--muted); font-size:13px; margin:0 0 22px;
+    }
+    .pill{
+      border:1px solid var(--border);
+      padding:4px 10px; border-radius:999px;
+      background:#fff;
+    }
+
+    .toc{
+      border:1px solid var(--border);
+      background:#fff;
+      border-radius:var(--radius);
+      padding:14px 16px;
+      box-shadow: var(--shadow);
+      margin: 18px 0 24px;
+    }
+    .toc h2{ font-size:16px; margin:0 0 8px; }
+    .toc ul{ margin:0; padding-left:18px; }
+    .toc li{ margin:6px 0; }
+
+    .note{
+      border-left:4px solid var(--border);
+      background:#fcfcfc;
+      padding:12px 14px;
+      border-radius:10px;
+      margin:16px 0;
+      color:#111827;
+    }
+
+    /* Affiliate blocks */
+    .affiliate-block{
+      border:1px solid var(--border);
+      background:var(--card);
+      padding:16px;
+      border-radius:var(--radius);
+      margin:18px 0 24px;
+      box-shadow: var(--shadow);
+    }
+    .affiliate-block h2, .affiliate-block h3{ margin:0 0 8px; }
+    .affiliate-block p{ margin:8px 0; color:#111827; }
+    .affiliate-block ul{ margin:10px 0 0; padding-left:18px; }
+    .affiliate-block li{ margin:10px 0; }
+    .disclosure{ font-size: 13px; color: var(--muted); margin-top:10px; }
+
+    .affiliate-inline{
+      border-left:4px solid #d1d5db;
+      background:#fcfcfc;
+      padding:12px 14px;
+      border-radius:10px;
+      margin:16px 0;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap:12px;
+      margin-top:12px;
+    }
+    .card{
+      border:1px solid var(--border);
+      background:#fff;
+      border-radius:12px;
+      padding:14px;
+      box-shadow: var(--shadow);
+    }
+    .card h3{ margin:0 0 6px; font-size:16px; }
+    .card p{ margin:0 0 10px; color:var(--muted); font-size:14px; }
+    .btnlink{
+      display:inline-block;
+      margin-top:4px;
+      font-weight:600;
+    }
+
+    hr{ border:0; border-top:1px solid var(--border); margin:26px 0; }
+
+    footer{
+      border-top:1px solid var(--border);
+      padding:22px 0 32px;
+      color:var(--muted);
+      font-size:13px;
+      background:#fff;
+    }
+    .footer-links{ display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; }
+  </style>
+
+  <!-- Structured data: Article -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Article",
-    "headline":"Smart Thermostat Guide: What Actually Saves Money",
-    "description":"A practical smart thermostat buying and setup guide: features that reduce energy bills, setup tips, and pitfalls to avoid.",
-    "mainEntityOfPage":"https://www.wattwisehub.com/guides/smart-thermostat-guide.html",
-    "publisher":{"@type":"Organization","name":"WattWiseHub","url":"https://www.wattwisehub.com/"},
-    "author":{"@type":"Organization","name":"WattWiseHub"}
+    "headline":"Smart Thermostat Guide (Setup, Mistakes, Savings)",
+    "description":"A practical smart thermostat guide: how to choose, install, and configure schedules for real savings—plus common mistakes and the best supporting upgrades (filters, sensors, draft sealing).",
+    "author":{"@type":"Organization","name":"WattWiseHub"},
+    "publisher":{"@type":"Organization","name":"WattWiseHub"},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.wattwisehub.com/guides/smart-thermostat-guide.html"}
   }
   </script>
 
-  <style>
-    body { font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:0; line-height:1.7; color:#111; }
-    header, main, footer { max-width:920px; margin:0 auto; padding:18px; }
-    header { padding-top:34px; }
-    nav a { margin-right:12px; }
-    .box { border:1px solid #eee; border-radius:14px; padding:16px; background:#fafafa; }
-    h1 { letter-spacing:-0.02em; margin:0 0 6px; }
-    .meta { color:#555; font-size:14px; margin:0 0 16px; }
-    a { color:#0a58ca; }
-    footer { border-top:1px solid #eee; color:#555; font-size:14px; padding:18px; }
-    ul { padding-left:20px; }
-    table { width:100%; border-collapse:collapse; margin:10px 0 0; }
-    th, td { border:1px solid #eee; padding:10px; vertical-align:top; }
-    th { background:#fafafa; text-align:left; }
-  </style>
-</head>
-<body>
-
-<header>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/guides/diy-home-energy-audit.html">DIY Audit</a>
-    <a href="/guides/weatherstripping-guide.html">Weatherstripping</a>
-  </nav>
-  <h1>Smart Thermostat Guide: What Actually Saves Money</h1>
-  <p class="meta">Smart thermostats save money only when you configure schedules and let them reduce HVAC runtime.</p>
-</header>
-
-<main>
-  <section class="box">
-    <h2>Who should buy a smart thermostat?</h2>
-    <ul>
-      <li>You have central HVAC (or a compatible system) and you can set schedules.</li>
-      <li>Your home is empty for chunks of the day (work/school/outings).</li>
-      <li>You’re on <strong>time-of-use</strong> pricing and can pre-cool/pre-heat before peak hours.</li>
-    </ul>
-  </section>
-
-  <h2>Features that actually reduce energy use</h2>
-  <table>
-    <thead>
-      <tr><th>Feature</th><th>Why it matters</th><th>How to use it</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Scheduling / setbacks</strong></td>
-        <td>Lower runtime when you’re asleep or away.</td>
-        <td>Set “away” + “sleep” temperatures and keep them consistent.</td>
-      </tr>
-      <tr>
-        <td><strong>Occupancy / geofencing</strong></td>
-        <td>Prevents heating/cooling empty rooms all day.</td>
-        <td>Enable it, but test for false “away” triggers.</td>
-      </tr>
-      <tr>
-        <td><strong>TOU / peak-hour awareness</strong></td>
-        <td>Shifts load to cheaper hours, cuts peak costs.</td>
-        <td>Pre-cool before peak and relax setpoint during peak.</td>
-      </tr>
-      <tr>
-        <td><strong>Equipment runtime reports</strong></td>
-        <td>Lets you verify savings and spot anomalies.</td>
-        <td>Check monthly runtime trend vs weather changes.</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h2>Common mistakes (that kill savings)</h2>
-  <ul>
-    <li>Leaving the thermostat in “Hold” at a comfort setpoint all day.</li>
-    <li>Over-aggressive setbacks that cause long recovery runs (wastes energy for some systems).</li>
-    <li>Ignoring air leaks/insulation—HVAC can’t “smart” its way out of a drafty home.</li>
-  </ul>
-
-  <section class="box" style="background:#fff;">
-    <h2>Recommended thermostat-related product categories</h2>
-    <p>Category placeholders for affiliate links. Replace <code>#</code> with your final tracking URLs later.</p>
-
-    <ul>
-      <li><strong>Smart thermostats (HVAC compatible)</strong> — prioritize scheduling + occupancy + runtime reports.
-        <div><a href="#" rel="nofollow sponsored">Shop: Smart thermostats →</a></div>
-      </li>
-      <li><strong>Room sensors</strong> — improve comfort in rooms that run hot/cold.
-        <div><a href="#" rel="nofollow sponsored">Shop: Temperature/occupancy sensors →</a></div>
-      </li>
-      <li><strong>HVAC filters (correct size)</strong> — clogged filters increase runtime and reduce airflow.
-        <div><a href="#" rel="nofollow sponsored">Shop: HVAC filters →</a></div>
-      </li>
-      <li><strong>Draft sealing essentials</strong> — makes thermostat scheduling work better.
-        <div><a href="/guides/weatherstripping-guide.html">Seal drafts (guide) →</a> · <a href="#" rel="nofollow sponsored">Shop: Draft sealing →</a></div>
-      </li>
-    </ul>
-
-    <p class="meta" style="margin-top:10px;">Avoid: buying a thermostat before fixing major drafts or before you’ll actually use schedules.</p>
-  </section>
-
-  <h2>Quick setup that works (15 minutes)</h2>
-  <ol>
-    <li><strong>Set a simple schedule:</strong> Wake / Away / Return / Sleep.</li>
-    <li><strong>Start with small setbacks:</strong> adjust by 1–2°C first, then fine-tune.</li>
-    <li><strong>Enable eco/auto features:</strong> but review after a week.</li>
-    <li><strong>Verify:</strong> compare HVAC runtime (or bill kWh) over 2–4 weeks.</li>
-  </ol>
-
-  <section class="box">
-    <h2>Best paired upgrade: seal drafts</h2>
-    <p>If your home has drafts, weatherstripping often improves comfort immediately and makes thermostat scheduling more effective.</p>
-    <p><a href="/guides/weatherstripping-guide.html">Read: Weatherstripping Guide →</a></p>
-  </section>
-
-  <h2>Next steps (internal links)</h2>
-  <ul>
-    <li><a href="/guides/diy-home-energy-audit.html">DIY Audit: find top wastes first</a></li>
-    <li><a href="/guides/weatherstripping-guide.html">Weatherstripping: fix drafts fast</a></li>
-  </ul>
-
-  <h2>FAQ</h2>
-  <h3>Will a smart thermostat always lower my bill?</h3>
-  <p>Not always. Savings depend on whether you use schedules/away modes and whether your home has manageable leakage and a reasonable HVAC setup.</p>
-
-  <h3>What’s the quickest way to see if it helped?</h3>
-  <p>Compare HVAC runtime reports (if available) and your next bill’s kWh against your baseline from the DIY audit.</p>
-
+  <!-- Structured data: FAQ -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
-      {"@type":"Question","name":"Will a smart thermostat always lower my bill?","acceptedAnswer":{"@type":"Answer","text":"Not always. Savings depend on using schedules/away modes and having a reasonably sealed home and HVAC setup."}},
-      {"@type":"Question","name":"What’s the quickest way to see if it helped?","acceptedAnswer":{"@type":"Answer","text":"Use runtime reports (if available) and compare your next bill’s kWh to your baseline from the DIY audit."}}
+      {
+        "@type":"Question",
+        "name":"Do smart thermostats really save money?",
+        "acceptedAnswer":{"@type":"Answer","text":"They can, but only when schedules/eco settings match your routine and your home is not extremely drafty. The biggest savings usually come from reducing unnecessary heating/cooling runtime."}
+      },
+      {
+        "@type":"Question",
+        "name":"What is the most common smart thermostat mistake?",
+        "acceptedAnswer":{"@type":"Answer","text":"Leaving schedules at the default or setting extreme temperature swings. Another major mistake is ignoring drafts and airflow issues—air sealing and clean filters often improve comfort and reduce runtime."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do I need room sensors?",
+        "acceptedAnswer":{"@type":"Answer","text":"Room sensors help when one room runs hotter/colder than others. They improve comfort by letting the thermostat prioritize certain rooms during different parts of the day."}
+      }
     ]
   }
   </script>
-</main>
+</head>
 
-<footer>
-  <div>© <span id="y"></span> WattWiseHub · <a href="/">Home</a></div>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-</footer>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <span class="dot" aria-hidden="true"></span>
+          <a href="https://www.wattwisehub.com/" aria-label="WattWiseHub Home">WattWiseHub</a>
+        </div>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="https://www.wattwisehub.com/">Home</a>
+          <a href="https://www.wattwisehub.com/guides/">Guides</a>
+          <a href="https://www.wattwisehub.com/calculator.html">Calculator</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
+  <main class="container">
+    <div class="crumbs">
+      <a href="https://www.wattwisehub.com/">Home</a> › <a href="https://www.wattwisehub.com/guides/">Guides</a> › Smart Thermostat Guide
+    </div>
+
+    <article>
+      <h1>Smart Thermostat Guide (Setup, Mistakes, Savings)</h1>
+      <p class="subhead">Smart thermostats don’t save money by magic—your settings and your home’s air leaks matter. Here’s a practical setup guide.</p>
+
+      <div class="meta">
+        <span class="pill">Evergreen guide</span>
+        <span class="pill">HVAC efficiency</span>
+        <span class="pill">Updated: 2026-02-13</span>
+      </div>
+
+      <!-- Quick Picks (high CTR) -->
+      <section class="affiliate-block quick-picks" aria-label="Quick Picks">
+        <h2>Quick Picks (What Actually Improves Savings)</h2>
+        <p>Thermostat savings improve when you pair the device with comfort basics: sensors, clean airflow, and reduced drafts.</p>
+
+        <ul>
+          <li>
+            ⭐ <a class="btnlink" href="https://amzn.to/4kT8s2l" target="_blank" rel="nofollow sponsored">
+              Smart Thermostat — the core upgrade (see today’s price →)
+            </a>
+          </li>
+          <li>
+            ⭐ <a class="btnlink" href="https://amzn.to/3ZAls2Q" target="_blank" rel="nofollow sponsored">
+              Room Sensor(s) — fix hot/cold rooms and improve comfort (view options →)
+            </a>
+          </li>
+          <li>
+            ⭐ <a class="btnlink" href="https://amzn.to/3MugPV8" target="_blank" rel="nofollow sponsored">
+              HVAC Filter — low-cost fix that often reduces runtime (check price →)
+            </a>
+          </li>
+          <li>
+            ⭐ <a class="btnlink" href="https://amzn.to/4repk5D" target="_blank" rel="nofollow sponsored">
+              Door Sweep (Draft Sealing) — makes schedules work better (see deal →)
+            </a>
+          </li>
+        </ul>
+
+        <p class="disclosure"><em>Disclosure: As an Amazon Associate, we may earn from qualifying purchases.</em></p>
+      </section>
+
+      <section class="toc" aria-label="Table of contents">
+        <h2>What you’ll learn</h2>
+        <ul>
+          <li><a href="#choose">How to choose a smart thermostat</a></li>
+          <li><a href="#install">Install checklist</a></li>
+          <li><a href="#setup">Best settings: schedules & eco modes</a></li>
+          <li><a href="#mistakes">Common mistakes (and fixes)</a></li>
+          <li><a href="#paired">Paired upgrades that boost savings</a></li>
+          <li><a href="#products">Recommended products (specific picks)</a></li>
+        </ul>
+      </section>
+
+      <section id="choose">
+        <h2>How to choose a smart thermostat</h2>
+        <p>Pick a thermostat that supports your HVAC system and your real routine. Look for:</p>
+        <ul>
+          <li><strong>Compatibility</strong> with your HVAC system (heat pump, furnace, etc.)</li>
+          <li><strong>Scheduling</strong> that matches how your home is used</li>
+          <li><strong>Reports</strong> (runtime/usage insights) so you can verify improvement</li>
+          <li><strong>Room sensors</strong> if comfort varies by room</li>
+        </ul>
+
+        <div class="note">
+          <strong>Practical rule:</strong> The best thermostat is the one you’ll actually configure (and keep configured).
+        </div>
+      </section>
+
+      <section id="install">
+        <h2>Install checklist</h2>
+        <p>Before you start, take a photo of your existing wiring. Label wires if needed, and confirm you have a stable Wi-Fi signal where the thermostat sits.</p>
+        <ul>
+          <li>Turn off HVAC power at the breaker</li>
+          <li>Photograph the wiring (don’t rely on memory)</li>
+          <li>Verify system compatibility (especially for heat pumps)</li>
+          <li>Complete setup in the app and test heat/cool</li>
+        </ul>
+      </section>
+
+      <section id="setup">
+        <h2>Best settings: schedules & eco modes</h2>
+        <p>Most savings come from reducing unnecessary runtime. Your schedule should reflect when people are actually home and awake.</p>
+        <ul>
+          <li>Use modest setbacks (avoid extreme swings)</li>
+          <li>Adjust gradually over a week, not all at once</li>
+          <li>Use “away” / occupancy features if reliable</li>
+        </ul>
+      </section>
+
+      <section id="mistakes">
+        <h2>Common mistakes (and fixes)</h2>
+
+        <h3>Mistake #1: Leaving default schedules</h3>
+        <p>Default schedules rarely match your life. Set wake/sleep/away times you actually follow.</p>
+
+        <h3>Mistake #2: Ignoring drafts and comfort issues</h3>
+        <p>If your home leaks air, your thermostat will run longer no matter how smart it is. Seal drafts first—especially door bottom gaps.</p>
+
+        <!-- Inline: door sweep (high conversion) -->
+        <div class="affiliate-inline">
+          <strong>Quick comfort win:</strong> A door sweep can reduce drafts immediately and make eco/schedule settings more effective.
+          <a href="https://amzn.to/4repk5D" target="_blank" rel="nofollow sponsored">
+            Door sweep (draft sealing) — see options →
+          </a>
+        </div>
+
+        <h3>Mistake #3: Dirty filters and poor airflow</h3>
+        <p>A clogged HVAC filter restricts airflow and can increase runtime. Replace filters on a schedule.</p>
+
+        <!-- Inline: filter (easy conversion) -->
+        <div class="affiliate-inline">
+          <strong>Low-cost fix:</strong> Check your filter size before buying.
+          <a href="https://amzn.to/3MugPV8" target="_blank" rel="nofollow sponsored">
+            HVAC filter — check price →
+          </a>
+        </div>
+      </section>
+
+      <section id="paired">
+        <h2>Paired upgrades that boost savings</h2>
+
+        <h3>Room sensors (fix hot/cold rooms)</h3>
+        <p>If bedrooms run colder or the office runs hotter, sensors help the thermostat prioritize comfort where it matters at different times.</p>
+
+        <!-- Inline: room sensors -->
+        <div class="affiliate-inline">
+          <strong>Comfort upgrade:</strong>
+          <a href="https://amzn.to/3ZAls2Q" target="_blank" rel="nofollow sponsored">
+            Room sensor(s) — view options →
+          </a>
+        </div>
+
+        <h3>Validate changes</h3>
+        <p>After you change schedules or seal drafts, track results for 7–14 days. Look for reduced runtime and fewer peaks.</p>
+        <p>Start with the basics in our <a href="https://www.wattwisehub.com/guides/diy-home-energy-audit.html">DIY Home Energy Audit</a>.</p>
+      </section>
+
+      <hr />
+
+      <!-- Bottom cards (decision stage) -->
+      <section id="products" class="affiliate-block products" aria-label="Recommended products">
+        <h2>Recommended Products (Specific Picks)</h2>
+        <p>Keep it simple: these 4 cover the thermostat itself plus the upgrades that make savings real.</p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Smart Thermostat</h3>
+            <p>Best for: scheduling + eco settings + runtime insights to reduce unnecessary heating/cooling.</p>
+            <a class="btnlink" href="https://amzn.to/4kT8s2l" target="_blank" rel="nofollow sponsored">
+              Smart thermostat — see today’s price →
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>Room Sensor(s)</h3>
+            <p>Best for: hot/cold rooms, better comfort, more reliable “smart” control.</p>
+            <a class="btnlink" href="https://amzn.to/3ZAls2Q" target="_blank" rel="nofollow sponsored">
+              Room sensors — view options →
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>HVAC Filter</h3>
+            <p>Best for: airflow + efficiency. Confirm your size before buying.</p>
+            <a class="btnlink" href="https://amzn.to/3MugPV8" target="_blank" rel="nofollow sponsored">
+              HVAC filter — check price →
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>Door Sweep (Draft Sealing)</h3>
+            <p>Best for: reducing drafts quickly so schedules and eco modes actually work.</p>
+            <a class="btnlink" href="https://amzn.to/4repk5D" target="_blank" rel="nofollow sponsored">
+              Door sweep — see options →
+            </a>
+          </div>
+        </div>
+
+        <p class="disclosure"><em>Disclosure: As an Amazon Associate, we may earn from qualifying purchases.</em></p>
+      </section>
+
+      <hr />
+
+      <section aria-label="Next guides">
+        <h2>Next steps</h2>
+        <ul>
+          <li>Seal drafts efficiently: <a href="https://www.wattwisehub.com/guides/weatherstripping-guide.html">Weatherstripping Guide</a></li>
+          <li>Start from measurement: <a href="https://www.wattwisehub.com/guides/diy-home-energy-audit.html">DIY Home Energy Audit</a></li>
+        </ul>
+      </section>
+
+      <section aria-label="FAQ">
+        <h2>FAQ</h2>
+
+        <h3>Do smart thermostats really save money?</h3>
+        <p>They can—if you set schedules that match your routine and reduce drafts/airflow issues that force long runtime.</p>
+
+        <h3>What’s the most common smart thermostat mistake?</h3>
+        <p>Leaving default schedules, using extreme temperature swings, and ignoring drafts or dirty filters.</p>
+
+        <h3>Do I need room sensors?</h3>
+        <p>If your home has uneven comfort across rooms, sensors often improve comfort and reduce over-conditioning.</p>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div><strong>WattWiseHub</strong> — practical energy efficiency guides.</div>
+      <div class="footer-links">
+        <a href="https://www.wattwisehub.com/">Home</a>
+        <a href="https://www.wattwisehub.com/guides/">Guides</a>
+        <a href="https://www.wattwisehub.com/calculator.html">Calculator</a>
+      </div>
+      <div style="margin-top:10px;">
+        <em>Disclosure:</em> As an Amazon Associate, we may earn from qualifying purchases.
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
-
