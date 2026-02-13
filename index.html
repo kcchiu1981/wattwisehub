@@ -3,31 +3,156 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>WattWiseHub — Practical Home Energy Efficiency Guides</title>
-  <meta name="description" content="Actionable, no-hype guides to reduce your electricity bill: DIY energy audits, smart thermostat tips, and weatherstripping that actually works." />
+  <title>WattWiseHub | Practical Energy-Saving Guides & Tools</title>
+  <meta name="description" content="WattWiseHub helps you cut electricity waste with practical, step-by-step guides. Start with a DIY home energy audit, smart thermostat setup, and weatherstripping for fast savings." />
   <link rel="canonical" href="https://www.wattwisehub.com/" />
+  <meta name="robots" content="index,follow" />
 
   <!-- Open Graph -->
+  <meta property="og:title" content="WattWiseHub | Practical Energy-Saving Guides & Tools" />
+  <meta property="og:description" content="Cut electricity waste with practical guides: DIY audit, smart thermostat setup, and weatherstripping." />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="WattWiseHub — Practical Home Energy Efficiency Guides" />
-  <meta property="og:description" content="DIY energy audits, smart thermostat buying tips, and weatherstripping guides to lower your power bill." />
   <meta property="og:url" content="https://www.wattwisehub.com/" />
+  <meta property="og:site_name" content="WattWiseHub" />
 
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="WattWiseHub — Practical Home Energy Efficiency Guides" />
-  <meta name="twitter:description" content="DIY energy audits, smart thermostat buying tips, and weatherstripping guides to lower your power bill." />
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#6b7280;
+      --border:#e5e7eb;
+      --card:#fafafa;
+      --link:#1f6feb;
+      --shadow: 0 1px 2px rgba(0,0,0,.05);
+      --radius:12px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.65;
+    }
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
 
-  <!-- JSON-LD: Organization + Website -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Organization",
-    "name":"WattWiseHub",
-    "url":"https://www.wattwisehub.com/",
-    "sameAs":[]
-  }
-  </script>
+    header{
+      border-bottom:1px solid var(--border);
+      background:#fff;
+      position:sticky; top:0; z-index:10;
+    }
+    .container{ max-width:980px; margin:0 auto; padding:0 18px; }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .brand .dot{ width:10px; height:10px; border-radius:50%; background:#111827; display:inline-block; }
+    .nav-links{
+      display:flex; gap:14px; flex-wrap:wrap;
+      font-size:14px;
+    }
+    .nav-links a{ color:#111827; opacity:.9; }
+    .nav-links a:hover{ opacity:1; }
+
+    main{ padding:28px 0 56px; }
+
+    .hero{
+      border:1px solid var(--border);
+      background:#fff;
+      border-radius:16px;
+      padding:18px;
+      box-shadow: var(--shadow);
+    }
+    h1{ line-height:1.2; margin:0 0 10px; font-size:34px; }
+    .subhead{ color:var(--muted); margin:0 0 16px; }
+    .hero-cta{
+      display:flex; gap:10px; flex-wrap:wrap;
+      margin-top:10px;
+    }
+    .btn{
+      display:inline-block;
+      padding:10px 14px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      background:#111827;
+      color:#fff;
+      font-weight:700;
+    }
+    .btn:hover{ text-decoration:none; opacity:.92; }
+    .btn.secondary{
+      background:#fff;
+      color:#111827;
+    }
+
+    .section{ margin-top:22px; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap:12px;
+      margin-top:12px;
+    }
+    .card{
+      border:1px solid var(--border);
+      background:#fff;
+      border-radius:12px;
+      padding:14px;
+      box-shadow: var(--shadow);
+    }
+    .card h2, .card h3{ margin:0 0 6px; }
+    .card p{ margin:0 0 10px; color:var(--muted); font-size:14px; }
+
+    /* Affiliate blocks */
+    .affiliate-block{
+      border:1px solid var(--border);
+      background:var(--card);
+      padding:16px;
+      border-radius:var(--radius);
+      margin:18px 0 0;
+      box-shadow: var(--shadow);
+    }
+    .affiliate-block h2{ margin:0 0 8px; }
+    .affiliate-block p{ margin:8px 0; }
+    .affiliate-block ul{ margin:10px 0 0; padding-left:18px; }
+    .affiliate-block li{ margin:10px 0; }
+    .disclosure{ font-size: 13px; color: var(--muted); margin-top:10px; }
+
+    .product-grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap:12px;
+      margin-top:12px;
+    }
+    .product-card{
+      border:1px solid var(--border);
+      background:#fff;
+      border-radius:12px;
+      padding:14px;
+      box-shadow: var(--shadow);
+    }
+    .product-card h3{ margin:0 0 6px; font-size:16px; }
+    .product-card p{ margin:0 0 10px; color:var(--muted); font-size:14px; }
+    .btnlink{ display:inline-block; font-weight:700; }
+
+    hr{ border:0; border-top:1px solid var(--border); margin:24px 0; }
+
+    footer{
+      border-top:1px solid var(--border);
+      padding:22px 0 32px;
+      color:var(--muted);
+      font-size:13px;
+      background:#fff;
+    }
+    .footer-links{ display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; }
+  </style>
+
+  <!-- Structured data: Website -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
@@ -36,107 +161,165 @@
     "url":"https://www.wattwisehub.com/",
     "potentialAction":{
       "@type":"SearchAction",
-      "target":"https://www.wattwisehub.com/?q={search_term_string}",
+      "target":"https://www.wattwisehub.com/guides/?q={search_term_string}",
       "query-input":"required name=search_term_string"
     }
   }
   </script>
-
-  <style>
-    :root { color-scheme: light; }
-    body { font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:0; line-height:1.6; color:#111; background:#fff; }
-    header { padding:48px 18px; border-bottom:1px solid #eee; background:linear-gradient(180deg,#fafafa,#fff); }
-    main { max-width:980px; margin:0 auto; padding:28px 18px 52px; }
-    h1 { font-size:40px; margin:0 0 10px; letter-spacing:-0.02em; }
-    .sub { font-size:18px; color:#333; max-width:70ch; margin:0; }
-    .grid { display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); margin-top:22px; }
-    .card { border:1px solid #eee; border-radius:14px; padding:18px; background:#fff; }
-    .card h2 { font-size:18px; margin:0 0 6px; }
-    .card p { margin:0 0 12px; color:#333; }
-    .btn { display:inline-block; padding:10px 12px; border-radius:10px; border:1px solid #ddd; text-decoration:none; color:#111; background:#fff; }
-    .btn:hover { background:#f7f7f7; }
-    .section { margin-top:34px; }
-    footer { border-top:1px solid #eee; padding:18px; color:#555; font-size:14px; }
-    .mini { color:#555; font-size:14px; }
-    ul { padding-left:20px; }
-    a { color:#0a58ca; }
-  </style>
 </head>
 
 <body>
   <header>
-    <div style="max-width:980px;margin:0 auto;">
-      <h1>WattWiseHub</h1>
-      <p class="sub">Practical home energy efficiency guides—no hype, just proven steps to reduce electricity bills, improve comfort, and build a smarter home.</p>
-      <p class="mini" style="margin-top:10px;">
-        Start with the three core guides below. They link to each other so you can follow a simple “audit → fix → optimize” path.
-      </p>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <span class="dot" aria-hidden="true"></span>
+          <a href="https://www.wattwisehub.com/" aria-label="WattWiseHub Home">WattWiseHub</a>
+        </div>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="https://www.wattwisehub.com/">Home</a>
+          <a href="https://www.wattwisehub.com/guides/">Guides</a>
+          <a href="https://www.wattwisehub.com/calculator.html">Calculator</a>
+        </nav>
+      </div>
     </div>
   </header>
 
-  <main>
-    <section class="grid" aria-label="Core guides">
-      <article class="card">
-        <h2>DIY Home Energy Audit</h2>
-        <p>Find the biggest wastes in under 60 minutes, then prioritize changes by payback and effort.</p>
-        <a class="btn" href="/guides/diy-home-energy-audit.html">Read the audit guide →</a>
-      </article>
+  <main class="container">
 
-      <article class="card">
-        <h2>Smart Thermostat Guide</h2>
-        <p>What features actually save money (and what’s just marketing), plus setup tips that matter.</p>
-        <a class="btn" href="/guides/smart-thermostat-guide.html">Read thermostat guide →</a>
-      </article>
+    <section class="hero" aria-label="Intro">
+      <h1>Cut Electricity Waste — Without Guessing</h1>
+      <p class="subhead">
+        Practical, step-by-step energy efficiency guides. Start with a DIY audit, seal drafts fast, and configure smart thermostat settings that actually reduce runtime.
+      </p>
 
-      <article class="card">
-        <h2>Weatherstripping Guide</h2>
-        <p>Seal drafts fast. Compare materials and learn a simple DIY install that improves comfort.</p>
-        <a class="btn" href="/guides/weatherstripping-guide.html">Read weatherstripping →</a>
-      </article>
+      <div class="hero-cta">
+        <a class="btn" href="https://www.wattwisehub.com/guides/diy-home-energy-audit.html">Start: DIY Energy Audit</a>
+        <a class="btn secondary" href="https://www.wattwisehub.com/guides/">Browse Guides</a>
+        <a class="btn secondary" href="https://www.wattwisehub.com/calculator.html">Electricity Cost Calculator</a>
+      </div>
     </section>
-    <section class="affiliate">
-      
-    <h2>Recommended Energy-Saving Products</h2>
-    <p>Carefully selected tools and upgrades that help reduce electricity usage and improve home efficiency.</p>
-      <div class="affiliate-grid">
-        <div class="affiliate-card">
-          <h3>Smart Thermostats</h3>
-          <p>Automate temperature control and cut HVAC energy waste.</p>
-          <a href="#" rel="nofollow sponsored">View Recommended Models →</a>
+
+    <section class="section" aria-label="Core guides">
+      <h2>Core Guides (Evergreen)</h2>
+      <div class="grid">
+        <div class="card">
+          <h3><a href="https://www.wattwisehub.com/guides/diy-home-energy-audit.html">DIY Home Energy Audit</a></h3>
+          <p>Find your top 1–3 electricity wastes in ~60 minutes and prioritize fixes.</p>
+          <a class="btnlink" href="https://www.wattwisehub.com/guides/diy-home-energy-audit.html">Read the guide →</a>
         </div>
-        <div class="affiliate-card">
-          <h3>Home Energy Monitors</h3>
-          <p>Track real-time electricity usage and detect power-hungry devices.</p>
-          <a href="#" rel="nofollow sponsored">Browse Energy Monitors →</a>
+
+        <div class="card">
+          <h3><a href="https://www.wattwisehub.com/guides/weatherstripping-guide.html">Weatherstripping Guide</a></h3>
+          <p>Stop drafts in under 30 minutes. Pick the right seal for each gap.</p>
+          <a class="btnlink" href="https://www.wattwisehub.com/guides/weatherstripping-guide.html">Read the guide →</a>
         </div>
-        <div class="affiliate-card">
-          <h3>Weatherproofing Kits</h3>
-          <p>Seal air leaks around doors and windows to prevent energy loss.</p>
-          <a href="#" rel="nofollow sponsored">See Weatherproofing Products →</a>
-        </div>
-        <div class="affiliate-card">
-          <h3>LED Lighting</h3>
-          <p>Upgrade to high-efficiency lighting and reduce electricity costs.</p>
-          <a href="#" rel="nofollow sponsored">Explore LED Options →</a>
+
+        <div class="card">
+          <h3><a href="https://www.wattwisehub.com/guides/smart-thermostat-guide.html">Smart Thermostat Guide</a></h3>
+          <p>Set schedules correctly, avoid common mistakes, and pair with the right upgrades.</p>
+          <a class="btnlink" href="https://www.wattwisehub.com/guides/smart-thermostat-guide.html">Read the guide →</a>
         </div>
       </div>
     </section>
 
-    <section class="section">
-      <h2>About</h2>
-      <p>WattWiseHub focuses on evergreen, low-risk energy-saving advice and product categories that help households cut electricity waste. We prioritize clear steps, checklists, and measurement so results are verifiable.</p>
-      <p class="mini">Contact: add a contact page later when you’re ready (or link to an email form).</p>
+    <!-- Affiliate: keep homepage focused, high-conversion -->
+    <section class="affiliate-block" aria-label="Recommended products">
+      <h2>Recommended Products (Top Picks)</h2>
+      <p>These are reliable, high-ROI picks that match our core guides. Buy only if they fit your specific problem.</p>
+
+      <div class="product-grid">
+        <article class="product-card">
+          <h3>Measure Before You Fix</h3>
+          <p>Stop guessing which device costs money. A plug-in meter shows real kWh and watts.</p>
+          <a class="btnlink" href="https://amzn.to/4aDX6dQ" target="_blank" rel="nofollow sponsored">
+            P3 Kill A Watt P4400 — see today’s price →
+          </a>
+        </article>
+
+        <article class="product-card">
+          <h3>Track Always-On Loads</h3>
+          <p>Energy monitoring smart plugs help spot standby waste and track device usage over time.</p>
+          <a class="btnlink" href="https://amzn.to/3M9hgEl" target="_blank" rel="nofollow sponsored">
+            TP-Link Kasa EP25 (Energy Monitoring) — check price →
+          </a>
+        </article>
+
+        <article class="product-card">
+          <h3>Fast Lighting Payback</h3>
+          <p>Swap the most-used bulbs first (kitchen, living room, hallway) for quick savings.</p>
+          <a class="btnlink" href="https://amzn.to/4ahs7Fr" target="_blank" rel="nofollow sponsored">
+            Philips LED A19 4-Pack — view options →
+          </a>
+        </article>
+
+        <article class="product-card">
+          <h3>Cut Standby Waste Automatically</h3>
+          <p>Ideal for TV/desk setups where multiple devices draw power even when “off”.</p>
+          <a class="btnlink" href="https://amzn.to/4awH1Gy" target="_blank" rel="nofollow sponsored">
+            TrickleStar TS1006 Advanced Power Strip — see deal →
+          </a>
+        </article>
+
+        <article class="product-card">
+          <h3>Seal the Biggest Draft (Door Bottom)</h3>
+          <p>The fastest comfort win in most homes. Seal exterior door bottom gaps first.</p>
+          <a class="btnlink" href="https://amzn.to/4tHoKzh" target="_blank" rel="nofollow sponsored">
+            Door Sweep — see today’s price →
+          </a>
+        </article>
+
+        <article class="product-card">
+          <h3>Quick Fix for Small Frame Gaps</h3>
+          <p>Foam tape is beginner-friendly and works well for small, consistent gaps.</p>
+          <a class="btnlink" href="https://amzn.to/4qtpXHn" target="_blank" rel="nofollow sponsored">
+            Foam Weatherstripping Tape — check price →
+          </a>
+        </article>
+      </div>
+
+      <p class="disclosure"><em>Disclosure: As an Amazon Associate, we may earn from qualifying purchases.</em></p>
     </section>
+
+    <hr />
+
+    <section class="section" aria-label="Start here">
+      <h2>Not sure where to start?</h2>
+      <div class="grid">
+        <div class="card">
+          <h3>Start with Measurement</h3>
+          <p>Do the audit once. You’ll stop chasing tiny optimizations and focus on the real bill drivers.</p>
+          <a class="btnlink" href="https://www.wattwisehub.com/guides/diy-home-energy-audit.html">Start the DIY audit →</a>
+        </div>
+        <div class="card">
+          <h3>Fix Comfort First</h3>
+          <p>Draft sealing often makes thermostat schedules “work” because runtime drops.</p>
+          <a class="btnlink" href="https://www.wattwisehub.com/guides/weatherstripping-guide.html">Seal drafts fast →</a>
+        </div>
+        <div class="card">
+          <h3>Then Optimize Control</h3>
+          <p>Once leaks and airflow basics are handled, smart thermostat settings can improve savings.</p>
+          <a class="btnlink" href="https://www.wattwisehub.com/guides/smart-thermostat-guide.html">Configure thermostat settings →</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
   <footer>
-    <div style="max-width:980px;margin:0 auto;">
-      <div>© <span id="y"></span> WattWiseHub</div>
-      <div class="mini">Disclaimer: Information is educational. Always follow local electrical codes and hire licensed pros for panel work or 240V circuits.</div>
+    <div class="container">
+      <div><strong>WattWiseHub</strong> — practical energy efficiency guides.</div>
+      <div class="footer-links">
+        <a href="https://www.wattwisehub.com/">Home</a>
+        <a href="https://www.wattwisehub.com/guides/">Guides</a>
+        <a href="https://www.wattwisehub.com/calculator.html">Calculator</a>
+        <a href="https://www.wattwisehub.com/sitemap.xml">Sitemap</a>
+      </div>
+      <div style="margin-top:10px;">
+        <em>Disclosure:</em> As an Amazon Associate, we may earn from qualifying purchases.
+      </div>
     </div>
-    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   </footer>
+
 </body>
 </html>
-
-
