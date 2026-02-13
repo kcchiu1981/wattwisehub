@@ -3,169 +3,441 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Weatherstripping Guide: Seal Drafts & Save Energy | WattWiseHub</title>
-  <meta name="description" content="Stop air leaks with weatherstripping. Compare types, learn a DIY install plan, and understand where sealing helps most for energy savings." />
+  <title>Weatherstripping Guide (Stop Drafts Fast) | WattWiseHub</title>
+  <meta name="description" content="Stop drafts fast with a practical weatherstripping guide. Learn which seal to use for doors/windows, how to measure gaps, and install the right products in under 30 minutes." />
   <link rel="canonical" href="https://www.wattwisehub.com/guides/weatherstripping-guide.html" />
+  <meta name="robots" content="index,follow" />
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="Weatherstripping Guide (Stop Drafts Fast) | WattWiseHub" />
+  <meta property="og:description" content="Choose the right weatherstripping for doors/windows, measure gaps, and install in under 30 minutes." />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="Weatherstripping Guide: Seal Drafts & Save Energy" />
-  <meta property="og:description" content="Types, installation steps, and the best places to seal drafts first." />
   <meta property="og:url" content="https://www.wattwisehub.com/guides/weatherstripping-guide.html" />
+  <meta property="og:site_name" content="WattWiseHub" />
 
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#6b7280;
+      --border:#e5e7eb;
+      --card:#fafafa;
+      --link:#1f6feb;
+      --shadow: 0 1px 2px rgba(0,0,0,.05);
+      --radius:12px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.65;
+    }
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    header{
+      border-bottom:1px solid var(--border);
+      background:#fff;
+      position:sticky; top:0; z-index:10;
+    }
+    .container{ max-width:980px; margin:0 auto; padding:0 18px; }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .brand .dot{ width:10px; height:10px; border-radius:50%; background:#111827; display:inline-block; }
+    .nav-links{
+      display:flex; gap:14px; flex-wrap:wrap;
+      font-size:14px;
+    }
+    .nav-links a{ color:#111827; opacity:.9; }
+    .nav-links a:hover{ opacity:1; }
+
+    main{ padding:28px 0 56px; }
+    .crumbs{ font-size:13px; color:var(--muted); margin:8px 0 12px; }
+    .crumbs a{ color:var(--muted); }
+    h1{ line-height:1.2; margin:10px 0 6px; font-size:34px; }
+    .subhead{ color:var(--muted); margin:0 0 18px; }
+
+    .meta{
+      display:flex; gap:10px; flex-wrap:wrap;
+      color:var(--muted); font-size:13px; margin:0 0 22px;
+    }
+    .pill{
+      border:1px solid var(--border);
+      padding:4px 10px; border-radius:999px;
+      background:#fff;
+    }
+
+    .toc{
+      border:1px solid var(--border);
+      background:#fff;
+      border-radius:var(--radius);
+      padding:14px 16px;
+      box-shadow: var(--shadow);
+      margin: 18px 0 24px;
+    }
+    .toc h2{ font-size:16px; margin:0 0 8px; }
+    .toc ul{ margin:0; padding-left:18px; }
+    .toc li{ margin:6px 0; }
+
+    .note{
+      border-left:4px solid var(--border);
+      background:#fcfcfc;
+      padding:12px 14px;
+      border-radius:10px;
+      margin:16px 0;
+      color:#111827;
+    }
+
+    /* Affiliate blocks */
+    .affiliate-block{
+      border:1px solid var(--border);
+      background:var(--card);
+      padding:16px;
+      border-radius:var(--radius);
+      margin:18px 0 24px;
+      box-shadow: var(--shadow);
+    }
+    .affiliate-block h2, .affiliate-block h3{ margin:0 0 8px; }
+    .affiliate-block p{ margin:8px 0; color:#111827; }
+    .affiliate-block ul{ margin:10px 0 0; padding-left:18px; }
+    .affiliate-block li{ margin:10px 0; }
+    .disclosure{ font-size: 13px; color: var(--muted); margin-top:10px; }
+
+    .affiliate-inline{
+      border-left:4px solid #d1d5db;
+      background:#fcfcfc;
+      padding:12px 14px;
+      border-radius:10px;
+      margin:16px 0;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap:12px;
+      margin-top:12px;
+    }
+    .card{
+      border:1px solid var(--border);
+      background:#fff;
+      border-radius:12px;
+      padding:14px;
+      box-shadow: var(--shadow);
+    }
+    .card h3{ margin:0 0 6px; font-size:16px; }
+    .card p{ margin:0 0 10px; color:var(--muted); font-size:14px; }
+    .btnlink{
+      display:inline-block;
+      margin-top:4px;
+      font-weight:600;
+    }
+
+    hr{ border:0; border-top:1px solid var(--border); margin:26px 0; }
+
+    footer{
+      border-top:1px solid var(--border);
+      padding:22px 0 32px;
+      color:var(--muted);
+      font-size:13px;
+      background:#fff;
+    }
+    .footer-links{ display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; }
+  </style>
+
+  <!-- Structured data: Article -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Article",
-    "headline":"Weatherstripping Guide: Seal Drafts & Save Energy",
-    "description":"Stop air leaks with weatherstripping. Compare types, learn DIY installation steps, and see where sealing helps most for energy savings.",
-    "mainEntityOfPage":"https://www.wattwisehub.com/guides/weatherstripping-guide.html",
-    "publisher":{"@type":"Organization","name":"WattWiseHub","url":"https://www.wattwisehub.com/"},
-    "author":{"@type":"Organization","name":"WattWiseHub"}
+    "headline":"Weatherstripping Guide (Stop Drafts Fast)",
+    "description":"Stop drafts fast with a practical weatherstripping guide. Learn which seal to use for doors/windows, how to measure gaps, and install the right products in under 30 minutes.",
+    "author":{"@type":"Organization","name":"WattWiseHub"},
+    "publisher":{"@type":"Organization","name":"WattWiseHub"},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.wattwisehub.com/guides/weatherstripping-guide.html"}
   }
   </script>
 
-  <style>
-    body { font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:0; line-height:1.7; color:#111; }
-    header, main, footer { max-width:920px; margin:0 auto; padding:18px; }
-    header { padding-top:34px; }
-    nav a { margin-right:12px; }
-    .box { border:1px solid #eee; border-radius:14px; padding:16px; background:#fafafa; }
-    h1 { letter-spacing:-0.02em; margin:0 0 6px; }
-    .meta { color:#555; font-size:14px; margin:0 0 16px; }
-    a { color:#0a58ca; }
-    footer { border-top:1px solid #eee; color:#555; font-size:14px; padding:18px; }
-    ul { padding-left:20px; }
-    table { width:100%; border-collapse:collapse; margin:10px 0 0; }
-    th, td { border:1px solid #eee; padding:10px; vertical-align:top; }
-    th { background:#fafafa; text-align:left; }
-  </style>
-</head>
-<body>
-
-<header>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/guides/diy-home-energy-audit.html">DIY Audit</a>
-    <a href="/guides/smart-thermostat-guide.html">Smart Thermostat</a>
-  </nav>
-  <h1>Weatherstripping Guide: Seal Drafts & Save Energy</h1>
-  <p class="meta">One of the fastest ROI upgrades: reduce drafts so HVAC works less and your home feels more comfortable.</p>
-</header>
-
-<main>
-  <section class="box">
-    <h2>Where weatherstripping helps most</h2>
-    <ul>
-      <li>Exterior doors (especially the bottom gap)</li>
-      <li>Windows with noticeable drafts</li>
-      <li>Garage entry door (big leakage source)</li>
-      <li>Attic hatch / access panels</li>
-    </ul>
-  </section>
-
-  <h2>Types of weatherstripping (quick comparison)</h2>
-  <table>
-    <thead>
-      <tr><th>Type</th><th>Best for</th><th>Pros</th><th>Cons</th></tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><strong>Foam tape</strong></td>
-        <td>Small gaps on doors/windows</td>
-        <td>Cheap, easy DIY</td>
-        <td>Wears faster</td>
-      </tr>
-      <tr>
-        <td><strong>Rubber/Vinyl</strong></td>
-        <td>Doors with consistent gap</td>
-        <td>Durable, good seal</td>
-        <td>Needs correct sizing</td>
-      </tr>
-      <tr>
-        <td><strong>Door sweep</strong></td>
-        <td>Bottom of exterior doors</td>
-        <td>Huge impact, quick win</td>
-        <td>Can scrape on uneven floors</td>
-      </tr>
-      <tr>
-        <td><strong>V-strip</strong></td>
-        <td>Window sashes, door edges</td>
-        <td>Good for sliding action</td>
-        <td>Install accuracy matters</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <h2>DIY install plan (30 minutes)</h2>
-  <ol>
-    <li><strong>Find the leak:</strong> feel drafts by hand, especially on windy days.</li>
-    <li><strong>Measure gaps:</strong> choose material thickness that compresses slightly when closed.</li>
-    <li><strong>Clean surfaces:</strong> alcohol wipe improves adhesion.</li>
-    <li><strong>Install & test:</strong> door/window should close smoothly without forcing.</li>
-    <li><strong>Re-check after 24 hours:</strong> adhesive sets; adjust if rubbing.</li>
-  </ol>
-
-  <section class="box" style="background:#fff;">
-    <h2>Recommended weatherstripping categories</h2>
-    <p>Category placeholders for affiliate links. Replace <code>#</code> with your final tracking URLs later.</p>
-
-    <ul>
-      <li><strong>Door sweeps</strong> — usually the biggest “instant comfort” win for exterior doors.
-        <div><a href="#" rel="nofollow sponsored">Shop: Door sweeps →</a></div>
-      </li>
-      <li><strong>Foam tape (various thickness)</strong> — quick seal for small gaps.
-        <div><a href="#" rel="nofollow sponsored">Shop: Foam weatherstripping tape →</a></div>
-      </li>
-      <li><strong>Rubber/Vinyl door seals</strong> — durable for consistent door gaps.
-        <div><a href="#" rel="nofollow sponsored">Shop: Door seal kits →</a></div>
-      </li>
-      <li><strong>V-strip for sliding surfaces</strong> — good for sashes and door edges.
-        <div><a href="#" rel="nofollow sponsored">Shop: V-strip seals →</a></div>
-      </li>
-      <li><strong>Adhesive remover + alcohol wipes</strong> — improves adhesion and longevity.
-        <div><a href="#" rel="nofollow sponsored">Shop: Prep/cleaning supplies →</a></div>
-      </li>
-    </ul>
-
-    <p class="meta" style="margin-top:10px;">Tip: buy after measuring the gap—too thick makes doors hard to close; too thin doesn’t seal.</p>
-  </section>
-
-  <section class="box">
-    <h2>Pair this with thermostat optimization</h2>
-    <p>Sealing drafts makes temperature hold better, so thermostat scheduling becomes more effective.</p>
-    <p><a href="/guides/smart-thermostat-guide.html">Read: Smart Thermostat Guide →</a></p>
-  </section>
-
-  <h2>Next steps (internal links)</h2>
-  <ul>
-    <li><a href="/guides/diy-home-energy-audit.html">DIY Audit: find the biggest leaks first</a></li>
-    <li><a href="/guides/smart-thermostat-guide.html">Smart Thermostat: setup that actually saves</a></li>
-  </ul>
-
-  <h2>FAQ</h2>
-  <h3>Do I need to seal every window perfectly?</h3>
-  <p>No—start with the worst offenders. Doors and the garage entry often produce the biggest comfort improvement.</p>
-
-  <h3>How do I know it worked?</h3>
-  <p>Drafts should reduce immediately. Over time, you should see less HVAC runtime and more stable indoor temperature.</p>
-
+  <!-- Structured data: FAQ -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
-      {"@type":"Question","name":"Do I need to seal every window perfectly?","acceptedAnswer":{"@type":"Answer","text":"No. Start with the worst offenders. Exterior doors and garage entry doors often have the biggest impact on comfort and leakage."}},
-      {"@type":"Question","name":"How do I know it worked?","acceptedAnswer":{"@type":"Answer","text":"Drafts should reduce immediately. Over time you should see less HVAC runtime and more stable indoor temperature."}}
+      {
+        "@type":"Question",
+        "name":"What is the best weatherstripping for the bottom of a door?",
+        "acceptedAnswer":{"@type":"Answer","text":"A door sweep is usually the fastest, highest-impact fix for drafts at the bottom gap. Measure the gap and choose a sweep that fits your door type and clearance."}
+      },
+      {
+        "@type":"Question",
+        "name":"Should I use foam tape or V-strip?",
+        "acceptedAnswer":{"@type":"Answer","text":"Foam tape is easiest for beginners and works well for small, consistent gaps. V-strip (V-seal) is often better for edges and sliding surfaces where you need a flexible, durable seal."}
+      },
+      {
+        "@type":"Question",
+        "name":"Why does weatherstripping improve energy savings?",
+        "acceptedAnswer":{"@type":"Answer","text":"Sealing drafts reduces unwanted air exchange, so your heating and cooling system runs less often to maintain comfort."}
+      }
     ]
   }
   </script>
-</main>
+</head>
 
-<footer>
-  <div>© <span id="y"></span> WattWiseHub · <a href="/">Home</a></div>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-</footer>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <span class="dot" aria-hidden="true"></span>
+          <a href="https://www.wattwisehub.com/" aria-label="WattWiseHub Home">WattWiseHub</a>
+        </div>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="https://www.wattwisehub.com/">Home</a>
+          <a href="https://www.wattwisehub.com/guides/">Guides</a>
+          <a href="https://www.wattwisehub.com/calculator.html">Calculator</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
+  <main class="container">
+    <div class="crumbs">
+      <a href="https://www.wattwisehub.com/">Home</a> › <a href="https://www.wattwisehub.com/guides/">Guides</a> › Weatherstripping Guide
+    </div>
+
+    <article>
+      <h1>Weatherstripping Guide (Stop Drafts Fast)</h1>
+      <p class="subhead">Seal drafts in under 30 minutes: pick the right strip, measure gaps correctly, and install the best fix for your doors and windows.</p>
+
+      <div class="meta">
+        <span class="pill">Evergreen guide</span>
+        <span class="pill">Draft sealing</span>
+        <span class="pill">Updated: 2026-02-13</span>
+      </div>
+
+      <!-- Quick Picks (high CTR) -->
+      <section class="affiliate-block quick-picks" aria-label="Quick Picks">
+        <h2>Quick Picks (Fastest Comfort Win)</h2>
+        <p>Start with the biggest leaks first (door bottom), then handle smaller gaps around frames.</p>
+
+        <ul>
+          <li>
+            ⭐ <a class="btnlink" href="https://amzn.to/4tHoKzh" target="_blank" rel="nofollow sponsored">
+              Door Sweep — biggest impact for door bottom drafts (see today’s price →)
+            </a>
+          </li>
+          <li>
+            ⭐ <a class="btnlink" href="https://amzn.to/4qtpXHn" target="_blank" rel="nofollow sponsored">
+              Foam Weatherstripping Tape — easiest fix for small gaps (check price →)
+            </a>
+          </li>
+          <li>
+            ⭐ <a class="btnlink" href="https://amzn.to/3ObDohW" target="_blank" rel="nofollow sponsored">
+              V-Strip (V-Seal) — great for door/window edges (view options →)
+            </a>
+          </li>
+          <li>
+            ⭐ <a class="btnlink" href="https://amzn.to/4bT5Te4" target="_blank" rel="nofollow sponsored">
+              Silicone Seal Strip — best for irregular gaps and longer edges (see deal →)
+            </a>
+          </li>
+        </ul>
+
+        <p class="disclosure"><em>Disclosure: As an Amazon Associate, we may earn from qualifying purchases.</em></p>
+      </section>
+
+      <section class="toc" aria-label="Table of contents">
+        <h2>What you’ll do</h2>
+        <ul>
+          <li><a href="#where">Where drafts usually come from</a></li>
+          <li><a href="#choose">Which weatherstripping to choose</a></li>
+          <li><a href="#measure">How to measure gaps (don’t guess)</a></li>
+          <li><a href="#install">DIY install plan (30 minutes)</a></li>
+          <li><a href="#mistakes">Common mistakes</a></li>
+          <li><a href="#products">Recommended products (specific picks)</a></li>
+        </ul>
+      </section>
+
+      <section id="where">
+        <h2>Where drafts usually come from</h2>
+        <p>Most homes leak air around doors and windows—especially at the bottom of exterior doors and along frames.</p>
+        <div class="note">
+          <strong>Fastest win:</strong> If you do only one thing today, seal the exterior door bottom gap first.
+        </div>
+      </section>
+
+      <section id="choose">
+        <h2>Which weatherstripping to choose</h2>
+        <ul>
+          <li><strong>Door bottom gap:</strong> door sweep (fastest, highest impact)</li>
+          <li><strong>Small consistent gaps:</strong> foam tape (beginner-friendly)</li>
+          <li><strong>Edges / sliding surfaces:</strong> V-strip (durable flexible seal)</li>
+          <li><strong>Irregular gaps:</strong> silicone seal strip (better conforming)</li>
+        </ul>
+      </section>
+
+      <section id="measure">
+        <h2>How to measure gaps (don’t guess)</h2>
+        <p>Most “doesn’t work” complaints come from buying the wrong thickness. Measure first.</p>
+        <ul>
+          <li>Use a simple feel test (draft + light test) to locate leaks</li>
+          <li>Measure the gap width and the length you need to cover</li>
+          <li>Pick a seal that compresses slightly without preventing doors from closing</li>
+        </ul>
+
+        <!-- Inline: measurement advice + door sweep -->
+        <div class="affiliate-inline">
+          <strong>Don’t guess thickness:</strong> Too thick = door won’t close; too thin = no seal.
+          For the biggest leak (door bottom), start here:
+          <a href="https://amzn.to/4tHoKzh" target="_blank" rel="nofollow sponsored">
+            Door sweep — see options →
+          </a>
+        </div>
+      </section>
+
+      <section id="install">
+        <h2>DIY install plan (30 minutes)</h2>
+        <ol>
+          <li><strong>Find your worst leak:</strong> exterior door bottom and main window edges.</li>
+          <li><strong>Measure gaps:</strong> width, length, and clearance.</li>
+          <li><strong>Install the door sweep first:</strong> quick comfort improvement.</li>
+          <li><strong>Seal smaller gaps:</strong> foam tape on frames and light leaks.</li>
+          <li><strong>Upgrade edges:</strong> V-strip for door/window sides if needed.</li>
+          <li><strong>Re-check:</strong> confirm door closes smoothly and leaks are reduced.</li>
+        </ol>
+
+        <!-- Inline: foam tape -->
+        <div class="affiliate-inline">
+          <strong>Beginner-friendly:</strong> Foam tape is the fastest way to seal small gaps around frames.
+          <a href="https://amzn.to/4qtpXHn" target="_blank" rel="nofollow sponsored">
+            Foam weatherstripping tape — check price →
+          </a>
+        </div>
+
+        <!-- Inline: V-strip -->
+        <div class="affiliate-inline">
+          <strong>For edges:</strong> If drafts come from the sides/top of doors or windows, V-strip is often a better, longer-lasting seal.
+          <a href="https://amzn.to/3ObDohW" target="_blank" rel="nofollow sponsored">
+            V-strip (V-seal) — view options →
+          </a>
+        </div>
+
+        <!-- Inline: silicone strip -->
+        <div class="affiliate-inline">
+          <strong>For irregular gaps:</strong> Silicone seal strips can conform better to uneven edges.
+          <a href="https://amzn.to/4bT5Te4" target="_blank" rel="nofollow sponsored">
+            Silicone seal strip — see deal →
+          </a>
+        </div>
+      </section>
+
+      <section id="mistakes">
+        <h2>Common mistakes</h2>
+        <ul>
+          <li><strong>Buying without measuring:</strong> the most common reason seals “fail”.</li>
+          <li><strong>Over-thick seals:</strong> doors won’t latch or will rub.</li>
+          <li><strong>Skipping the door bottom:</strong> the biggest leak often remains.</li>
+          <li><strong>Poor surface prep:</strong> clean and dry the surface before applying tape.</li>
+        </ul>
+
+        <div class="note">
+          <strong>Tip:</strong> If you’re doing this to lower your bill, combine draft sealing with your
+          <a href="https://www.wattwisehub.com/guides/diy-home-energy-audit.html">DIY Home Energy Audit</a>
+          so you focus on the biggest wastes first.
+        </div>
+      </section>
+
+      <hr />
+
+      <!-- Bottom Product Cards (decision stage) -->
+      <section id="products" class="affiliate-block products" aria-label="Recommended products">
+        <h2>Recommended Products (Specific Picks)</h2>
+        <p>These 4 cover most homes. Measure first, then buy the seal that matches your gap.</p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Door Sweep</h3>
+            <p>Best for: exterior door bottom drafts (often the biggest comfort win).</p>
+            <a class="btnlink" href="https://amzn.to/4tHoKzh" target="_blank" rel="nofollow sponsored">
+              Door sweep — see today’s price →
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>Foam Weatherstripping Tape</h3>
+            <p>Best for: small, consistent gaps around frames. Easy DIY install.</p>
+            <a class="btnlink" href="https://amzn.to/4qtpXHn" target="_blank" rel="nofollow sponsored">
+              Foam tape — check price →
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>V-Strip (V-Seal)</h3>
+            <p>Best for: door/window edges and sliding surfaces; durable flexible seal.</p>
+            <a class="btnlink" href="https://amzn.to/3ObDohW" target="_blank" rel="nofollow sponsored">
+              V-strip — view options →
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>Silicone Seal Strip</h3>
+            <p>Best for: irregular gaps and longer edges that need a conforming seal.</p>
+            <a class="btnlink" href="https://amzn.to/4bT5Te4" target="_blank" rel="nofollow sponsored">
+              Silicone seal — see deal →
+            </a>
+          </div>
+        </div>
+
+        <p class="disclosure"><em>Disclosure: As an Amazon Associate, we may earn from qualifying purchases.</em></p>
+      </section>
+
+      <hr />
+
+      <section aria-label="Next guides">
+        <h2>Next steps</h2>
+        <ul>
+          <li>Measure and prioritize savings: <a href="https://www.wattwisehub.com/guides/diy-home-energy-audit.html">DIY Home Energy Audit</a></li>
+          <li>Improve HVAC control: <a href="https://www.wattwisehub.com/guides/smart-thermostat-guide.html">Smart Thermostat Guide</a></li>
+        </ul>
+      </section>
+
+      <section aria-label="FAQ">
+        <h2>FAQ</h2>
+
+        <h3>What is the best weatherstripping for the bottom of a door?</h3>
+        <p>A door sweep is usually the fastest, highest-impact fix for drafts at the bottom gap. Measure the gap first and pick a sweep that matches your door clearance.</p>
+
+        <h3>Should I use foam tape or V-strip?</h3>
+        <p>Foam tape is easiest for beginners and works well for small, consistent gaps. V-strip is often better for edges and sliding surfaces where you want a flexible, durable seal.</p>
+
+        <h3>Why does weatherstripping improve energy savings?</h3>
+        <p>Sealing drafts reduces unwanted air exchange, so your heating and cooling system runs less often to maintain comfort.</p>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div><strong>WattWiseHub</strong> — practical energy efficiency guides.</div>
+      <div class="footer-links">
+        <a href="https://www.wattwisehub.com/">Home</a>
+        <a href="https://www.wattwisehub.com/guides/">Guides</a>
+        <a href="https://www.wattwisehub.com/calculator.html">Calculator</a>
+      </div>
+      <div style="margin-top:10px;">
+        <em>Disclosure:</em> As an Amazon Associate, we may earn from qualifying purchases.
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
-
