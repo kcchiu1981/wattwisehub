@@ -3,59 +3,121 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>WattWiseHub — Save Energy, Cut Bills</title>
-  <meta name="description" content="Practical home energy efficiency guides: DIY audits, HVAC checklists, smart thermostat schedules, and product picks." />
+  <title>WattWiseHub — Practical Home Energy Efficiency Guides</title>
+  <meta name="description" content="Actionable, no-hype guides to reduce your electricity bill: DIY energy audits, smart thermostat tips, and weatherstripping that actually works." />
   <link rel="canonical" href="https://www.wattwisehub.com/" />
-  <meta property="og:title" content="WattWiseHub — Save Energy, Cut Bills" />
-  <meta property="og:description" content="Practical, evergreen home energy efficiency guides and tools." />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="WattWiseHub — Practical Home Energy Efficiency Guides" />
+  <meta property="og:description" content="DIY energy audits, smart thermostat buying tips, and weatherstripping guides to lower your power bill." />
   <meta property="og:url" content="https://www.wattwisehub.com/" />
-  <meta name="robots" content="index,follow" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="WattWiseHub — Practical Home Energy Efficiency Guides" />
+  <meta name="twitter:description" content="DIY energy audits, smart thermostat buying tips, and weatherstripping guides to lower your power bill." />
+
+  <!-- JSON-LD: Organization + Website -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Organization",
+    "name":"WattWiseHub",
+    "url":"https://www.wattwisehub.com/",
+    "sameAs":[]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"WattWiseHub",
+    "url":"https://www.wattwisehub.com/",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://www.wattwisehub.com/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
+  }
+  </script>
+
   <style>
-    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;max-width:920px;margin:40px auto;padding:0 16px;line-height:1.6}
-    nav a{margin-right:14px;text-decoration:none}
-    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px;margin-top:18px}
-    .card{border:1px solid #ddd;border-radius:12px;padding:16px}
-    .muted{color:#666}
-    footer{margin-top:30px;padding-top:18px;border-top:1px solid #eee}
+    :root { color-scheme: light; }
+    body { font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:0; line-height:1.6; color:#111; background:#fff; }
+    header { padding:48px 18px; border-bottom:1px solid #eee; background:linear-gradient(180deg,#fafafa,#fff); }
+    main { max-width:980px; margin:0 auto; padding:28px 18px 52px; }
+    h1 { font-size:40px; margin:0 0 10px; letter-spacing:-0.02em; }
+    .sub { font-size:18px; color:#333; max-width:70ch; margin:0; }
+    .grid { display:grid; gap:14px; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); margin-top:22px; }
+    .card { border:1px solid #eee; border-radius:14px; padding:18px; background:#fff; }
+    .card h2 { font-size:18px; margin:0 0 6px; }
+    .card p { margin:0 0 12px; color:#333; }
+    .btn { display:inline-block; padding:10px 12px; border-radius:10px; border:1px solid #ddd; text-decoration:none; color:#111; background:#fff; }
+    .btn:hover { background:#f7f7f7; }
+    .section { margin-top:34px; }
+    footer { border-top:1px solid #eee; padding:18px; color:#555; font-size:14px; }
+    .mini { color:#555; font-size:14px; }
+    ul { padding-left:20px; }
+    a { color:#0a58ca; }
   </style>
 </head>
+
 <body>
-  <nav>
-    <a href="/guides/">Guides</a>
-    <a href="/tools/">Tools</a>
-    <a href="/about.html">About</a>
-  </nav>
-
-  <h1>Save energy. Cut bills. Stay comfortable.</h1>
-  <p class="muted">
-    Practical, evergreen home energy efficiency content: audits, HVAC checklists, smart thermostat setups, and product guides that actually help.
-  </p>
-
-  <p>
-    <a href="/guides/energy-audit.html">Start with Guides</a> ·
-    <a href="/guides/energy-audit.html">DIY Energy Audit Checklist</a>
-  </p>
-
-  <div class="grid">
-    <div class="card">
-      <h2><a href="/guides/energy-audit.html">DIY Home Energy Audit Checklist</a></h2>
-      <p>Find the biggest waste points in 60–90 minutes, prioritize fixes by ROI, and track savings.</p>
+  <header>
+    <div style="max-width:980px;margin:0 auto;">
+      <h1>WattWiseHub</h1>
+      <p class="sub">Practical home energy efficiency guides—no hype, just proven steps to reduce electricity bills, improve comfort, and build a smarter home.</p>
+      <p class="mini" style="margin-top:10px;">
+        Start with the three core guides below. They link to each other so you can follow a simple “audit → fix → optimize” path.
+      </p>
     </div>
-    <div class="card">
-      <h2><a href="/guides/smart-thermostat-tou.html">Smart Thermostat Schedules (TOU-ready)</a></h2>
-      <p>Simple schedules that reduce peak usage without turning your home into a freezer.</p>
-    </div>
-    <div class="card">
-      <h2><a href="/guides/weatherstripping-vs-door-sweeps.html">Weatherstripping vs Door Sweeps</a></h2>
-      <p>What to buy, where it works, and the mistakes that cause drafts to come back.</p>
-    </div>
-  </div>
+  </header>
 
-  <h2>Affiliate disclosure</h2>
-  <p class="muted">Some links may be affiliate links. If you buy through them, we may earn a commission at no extra cost to you.</p>
+  <main>
+    <section class="grid" aria-label="Core guides">
+      <article class="card">
+        <h2>DIY Home Energy Audit</h2>
+        <p>Find the biggest wastes in under 60 minutes, then prioritize changes by payback and effort.</p>
+        <a class="btn" href="/guides/diy-home-energy-audit.html">Read the audit guide →</a>
+      </article>
 
-  <footer class="muted">
-    © WattWiseHub · <a href="/privacy.html">Privacy</a> · <a href="/contact.html">Contact</a>
+      <article class="card">
+        <h2>Smart Thermostat Guide</h2>
+        <p>What features actually save money (and what’s just marketing), plus setup tips that matter.</p>
+        <a class="btn" href="/guides/smart-thermostat-guide.html">Read thermostat guide →</a>
+      </article>
+
+      <article class="card">
+        <h2>Weatherstripping Guide</h2>
+        <p>Seal drafts fast. Compare materials and learn a simple DIY install that improves comfort.</p>
+        <a class="btn" href="/guides/weatherstripping-guide.html">Read weatherstripping →</a>
+      </article>
+    </section>
+
+    <section class="section">
+      <h2>How to use WattWiseHub (the simple path)</h2>
+      <ol>
+        <li><strong>Audit:</strong> identify where your energy is going.</li>
+        <li><strong>Seal:</strong> stop air leaks that force HVAC to work harder.</li>
+        <li><strong>Optimize:</strong> tune schedules and behavior so savings stick.</li>
+      </ol>
+      <p class="mini">Tip: After each change, track your bill or kWh to confirm results. Small improvements compound.</p>
+    </section>
+
+    <section class="section">
+      <h2>About</h2>
+      <p>WattWiseHub focuses on evergreen, low-risk energy-saving advice and product categories that help households cut electricity waste. We prioritize clear steps, checklists, and measurement so results are verifiable.</p>
+      <p class="mini">Contact: add a contact page later when you’re ready (or link to an email form).</p>
+    </section>
+  </main>
+
+  <footer>
+    <div style="max-width:980px;margin:0 auto;">
+      <div>© <span id="y"></span> WattWiseHub</div>
+      <div class="mini">Disclaimer: Information is educational. Always follow local electrical codes and hire licensed pros for panel work or 240V circuits.</div>
+    </div>
+    <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
   </footer>
 </body>
 </html>
