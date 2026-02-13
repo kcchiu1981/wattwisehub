@@ -3,227 +3,435 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>DIY Home Energy Audit (Quick Checklist + High-Impact Fixes) | WattWiseHub</title>
-  <meta name="description" content="A practical DIY home energy audit you can do in under 60 minutes. Find top electricity wastes, prioritize fixes by payback, and verify savings." />
+  <title>DIY Home Energy Audit (Step-by-Step) | WattWiseHub</title>
+  <meta name="description" content="A practical DIY home energy audit you can finish in 60 minutes. Find the biggest electricity wastes, prioritize fixes, and track real savings with simple tools." />
   <link rel="canonical" href="https://www.wattwisehub.com/guides/diy-home-energy-audit.html" />
+  <meta name="robots" content="index,follow" />
 
+  <!-- Open Graph -->
+  <meta property="og:title" content="DIY Home Energy Audit (Step-by-Step) | WattWiseHub" />
+  <meta property="og:description" content="Finish a DIY energy audit in 60 minutes: locate electricity waste, prioritize fixes, and measure savings." />
   <meta property="og:type" content="article" />
-  <meta property="og:title" content="DIY Home Energy Audit (Quick Checklist + High-Impact Fixes)" />
-  <meta property="og:description" content="Do a DIY energy audit in under 60 minutes. Identify top wastes, pick the best fixes, and track savings." />
   <meta property="og:url" content="https://www.wattwisehub.com/guides/diy-home-energy-audit.html" />
+  <meta property="og:site_name" content="WattWiseHub" />
 
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#6b7280;
+      --border:#e5e7eb;
+      --card:#fafafa;
+      --link:#1f6feb;
+      --shadow: 0 1px 2px rgba(0,0,0,.05);
+      --radius:12px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.65;
+    }
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
+
+    header{
+      border-bottom:1px solid var(--border);
+      background:#fff;
+      position:sticky; top:0; z-index:10;
+    }
+    .container{ max-width:980px; margin:0 auto; padding:0 18px; }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0;
+      gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .brand .dot{ width:10px; height:10px; border-radius:50%; background:#111827; display:inline-block; }
+    .nav-links{
+      display:flex; gap:14px; flex-wrap:wrap;
+      font-size:14px;
+    }
+    .nav-links a{ color:#111827; opacity:.9; }
+    .nav-links a:hover{ opacity:1; }
+
+    main{ padding:28px 0 56px; }
+    .crumbs{ font-size:13px; color:var(--muted); margin:8px 0 12px; }
+    .crumbs a{ color:var(--muted); }
+    h1{ line-height:1.2; margin:10px 0 6px; font-size:34px; }
+    .subhead{ color:var(--muted); margin:0 0 18px; }
+
+    .meta{
+      display:flex; gap:10px; flex-wrap:wrap;
+      color:var(--muted); font-size:13px; margin:0 0 22px;
+    }
+    .pill{
+      border:1px solid var(--border);
+      padding:4px 10px; border-radius:999px;
+      background:#fff;
+    }
+
+    .toc{
+      border:1px solid var(--border);
+      background:#fff;
+      border-radius:var(--radius);
+      padding:14px 16px;
+      box-shadow: var(--shadow);
+      margin: 18px 0 24px;
+    }
+    .toc h2{ font-size:16px; margin:0 0 8px; }
+    .toc ul{ margin:0; padding-left:18px; }
+    .toc li{ margin:6px 0; }
+
+    .note{
+      border-left:4px solid var(--border);
+      background:#fcfcfc;
+      padding:12px 14px;
+      border-radius:10px;
+      margin:16px 0;
+      color:#111827;
+    }
+
+    /* Affiliate blocks */
+    .affiliate-block{
+      border:1px solid var(--border);
+      background:var(--card);
+      padding:16px;
+      border-radius:var(--radius);
+      margin:18px 0 24px;
+      box-shadow: var(--shadow);
+    }
+    .affiliate-block h2, .affiliate-block h3{ margin:0 0 8px; }
+    .affiliate-block p{ margin:8px 0; color:#111827; }
+    .affiliate-block ul{ margin:10px 0 0; padding-left:18px; }
+    .affiliate-block li{ margin:10px 0; }
+    .disclosure{ font-size: 13px; color: var(--muted); margin-top:10px; }
+
+    .affiliate-inline{
+      border-left:4px solid #d1d5db;
+      background:#fcfcfc;
+      padding:12px 14px;
+      border-radius:10px;
+      margin:16px 0;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap:12px;
+      margin-top:12px;
+    }
+    .card{
+      border:1px solid var(--border);
+      background:#fff;
+      border-radius:12px;
+      padding:14px;
+      box-shadow: var(--shadow);
+    }
+    .card h3{ margin:0 0 6px; font-size:16px; }
+    .card p{ margin:0 0 10px; color:var(--muted); font-size:14px; }
+    .btnlink{
+      display:inline-block;
+      margin-top:4px;
+      font-weight:600;
+    }
+
+    hr{ border:0; border-top:1px solid var(--border); margin:26px 0; }
+
+    footer{
+      border-top:1px solid var(--border);
+      padding:22px 0 32px;
+      color:var(--muted);
+      font-size:13px;
+      background:#fff;
+    }
+    .footer-links{ display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; }
+  </style>
+
+  <!-- Structured data: Article -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"Article",
-    "headline":"DIY Home Energy Audit (Quick Checklist + High-Impact Fixes)",
-    "description":"A practical DIY home energy audit you can do in under 60 minutes to find the biggest electricity wastes, prioritize fixes, and verify savings.",
-    "mainEntityOfPage":"https://www.wattwisehub.com/guides/diy-home-energy-audit.html",
-    "publisher":{"@type":"Organization","name":"WattWiseHub","url":"https://www.wattwisehub.com/"},
-    "author":{"@type":"Organization","name":"WattWiseHub"}
+    "headline":"DIY Home Energy Audit (Step-by-Step)",
+    "description":"A practical DIY home energy audit you can finish in 60 minutes. Find the biggest electricity wastes, prioritize fixes, and track real savings with simple tools.",
+    "author":{"@type":"Organization","name":"WattWiseHub"},
+    "publisher":{"@type":"Organization","name":"WattWiseHub"},
+    "mainEntityOfPage":{"@type":"WebPage","@id":"https://www.wattwisehub.com/guides/diy-home-energy-audit.html"}
   }
   </script>
 
-  <style>
-    body { font-family: system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; margin:0; line-height:1.7; color:#111; }
-    header, main, footer { max-width:920px; margin:0 auto; padding:18px; }
-    header { padding-top:34px; }
-    nav a { margin-right:12px; }
-    .box { border:1px solid #eee; border-radius:14px; padding:16px; background:#fafafa; }
-    h1 { letter-spacing:-0.02em; margin:0 0 6px; }
-    .meta { color:#555; font-size:14px; margin:0 0 16px; }
-    a { color:#0a58ca; }
-    footer { border-top:1px solid #eee; color:#555; font-size:14px; padding:18px; }
-    ul { padding-left:20px; }
-    code { background:#f4f4f4; padding:2px 6px; border-radius:6px; }
-  </style>
-</head>
-<body>
-
-<header>
-  <nav>
-    <a href="/">Home</a>
-    <a href="/guides/smart-thermostat-guide.html">Smart Thermostat</a>
-    <a href="/guides/weatherstripping-guide.html">Weatherstripping</a>
-  </nav>
-  <h1>DIY Home Energy Audit (Quick Checklist + High-Impact Fixes)</h1>
-  <p class="meta">Goal: identify your biggest energy wastes quickly, then fix the top 1–3 items with the best payback.</p>
-  <section class="affiliate-block quick-picks">
-  <h2>Quick Picks (High-ROI Audit Tools)</h2>
-  <p>Start with measurement and quick wins. These are reliable, best-selling picks.</p>
-
-  <ul>
-    <li>
-      ⭐ <a href="#AMZ_KASA_EP25" target="_blank" rel="nofollow sponsored">
-        TP-Link Kasa EP25 (Energy Monitoring Smart Plug) — find always-on loads fast →
-      </a>
-    </li>
-    <li>
-      ⭐ <a href="#AMZ_KILLAWATT_P4400" target="_blank" rel="nofollow sponsored">
-        P3 Kill A Watt P4400 — simple plug-in meter to measure real kWh →
-      </a>
-    </li>
-    <li>
-      ⭐ <a href="#AMZ_PHILIPS_A19_ULTRADEF" target="_blank" rel="nofollow sponsored">
-        Philips Ultra Definition A19 (Dimmable, multi-pack) — quickest lighting payback →
-      </a>
-    </li>
-  </ul>
-
-  <p class="disclosure"><em>Disclosure: As an Amazon Associate, we may earn from qualifying purchases.</em></p>
-</section>
-
-</header>
-
-<main>
-  <section class="box">
-    <h2>What you need (optional but helpful)</h2>
-    <ul>
-      <li>Last 2–3 utility bills (or your utility portal)</li>
-      <li>A phone camera (to capture model numbers + problem spots)</li>
-      <li>If you have it: a plug-in energy meter or a smart plug with usage tracking</li>
-    </ul>
-  </section>
-
-  <h2>Step 1 — Establish a baseline (10 minutes)</h2>
-  <ul>
-    <li>Write down your typical monthly <strong>kWh</strong> and total bill.</li>
-    <li>Note your <strong>rate type</strong>: flat, tiered, or time-of-use (TOU).</li>
-    <li>Circle seasonal spikes (summer cooling / winter heating).</li>
-  </ul>
-  <p><strong>Why this matters:</strong> without a baseline, you can’t prove savings. After changes, compare the next bill (or the next 2–4 weeks of kWh) against your baseline.</p>
-
-  <h2>Step 2 — Quick walkthrough audit (30 minutes)</h2>
-
-  <h3>A) Air leaks & drafts (highest ROI)</h3>
-  <ul>
-    <li>Check doors/windows for visible gaps and cold/hot drafts.</li>
-    <li>Look at attic hatches, recessed lights, and cable/pipe penetrations.</li>
-    <li>Look for “dust streaks” near vents or baseboards (a sign of air movement).</li>
-  </ul>
-  <p>Most homes waste a surprising amount of HVAC energy through leakage. Fixing leaks often pays back faster than buying new gadgets.</p>
-
-  <h3>B) HVAC basics</h3>
-  <ul>
-    <li>Replace or clean HVAC filter (if applicable).</li>
-    <li>Make sure supply/return vents aren’t blocked by furniture.</li>
-    <li>Check thermostat schedule (many are set to “always comfortable” = always expensive).</li>
-  </ul>
-  <p>Next: use a smart thermostat only if you will actually configure schedules and occupancy.</p>
-
-  <h3>C) Lighting & “always-on” devices</h3>
-  <ul>
-    <li>Identify remaining incandescent/halogen bulbs; plan to convert to LED.</li>
-    <li>Find always-on loads: old set-top boxes, gaming consoles, desktop PCs, spare fridges/freezers.</li>
-    <li>Use a smart power strip for entertainment centers.</li>
-  </ul>
-  <div class="affiliate-inline">
-  <strong>Fast win:</strong> Many bills hide in standby power (TV boxes, consoles, PCs).
-  <a href="#AMZ_TRICKLESTAR_TS1006" target="_blank" rel="nofollow sponsored">
-    TrickleStar Advanced PowerStrip (control outlet + switched outlets) can cut “always-on” waste →
-  </a>
-  </div>
-
-
-  <h3>D) Hot water & laundry</h3>
-  <ul>
-    <li>Set water heater temp to ~49°C / 120°F (unless your situation requires higher).</li>
-    <li>Wash clothes cold when possible; line-dry light loads when practical.</li>
-  </ul>
-
-  <h2>Step 3 — Prioritize fixes (the “Top 3” rule)</h2>
-  <p>Pick the top 3 actions that are <strong>low effort + high impact</strong>. Typical winners:</p>
-  <ol>
-    <li><strong>Seal drafts</strong> (weatherstripping, door sweeps)</li>
-    <li><strong>Thermostat optimization</strong> (schedule + setbacks)</li>
-    <li><strong>LED conversion</strong> + cut standby loads</li>
-  </ol>
-
-  <section class="box">
-    <h2>Quick verification plan (don’t skip)</h2>
-    <ul>
-      <li>After changes, compare your next bill’s kWh vs baseline.</li>
-      <li>If you have TOU rates, compare peak-hour usage before/after.</li>
-      <li>Document what you changed + date.</li>
-    </ul>
-    <p><strong>Simple rule:</strong> If you can’t measure it, you can’t improve it reliably.</p>
-  </section>
-
-<section class="affiliate-block products">
-  <h2>Recommended Products to Support Your DIY Audit</h2>
-  <p>Specific, high-conversion tools that match the steps above. Buy only after you identify your top 1–3 wastes.</p>
-
-  <div class="product-grid">
-
-    <article class="product-card">
-      <h3>Energy Monitoring Smart Plug</h3>
-      <p>Best for: finding always-on loads and tracking device-level usage over time.</p>
-      <a href="#AMZ_KASA_EP25" target="_blank" rel="nofollow sponsored">
-        TP-Link Kasa EP25 (Energy Monitoring) — check price →
-      </a>
-    </article>
-
-    <article class="product-card">
-      <h3>Plug-in Energy Meter</h3>
-      <p>Best for: quick measurement (fridge, dehumidifier, space heater, PC). Simple and accurate.</p>
-      <a href="#AMZ_KILLAWATT_P4400" target="_blank" rel="nofollow sponsored">
-        P3 Kill A Watt P4400 — view on Amazon →
-      </a>
-    </article>
-
-    <article class="product-card">
-      <h3>Advanced Power Strip</h3>
-      <p>Best for: entertainment centers & desk setups; reduces standby power automatically.</p>
-      <a href="#AMZ_TRICKLESTAR_TS1006" target="_blank" rel="nofollow sponsored">
-        TrickleStar Advanced PowerStrip TS1006 — see top-rated option →
-      </a>
-    </article>
-
-    <article class="product-card">
-      <h3>High-Quality LED Bulbs (Multi-pack)</h3>
-      <p>Best for: fast ROI lighting upgrades. Choose dimmable + correct color temperature.</p>
-      <a href="#AMZ_PHILIPS_A19_ULTRADEF" target="_blank" rel="nofollow sponsored">
-        Philips Ultra Definition A19 (Dimmable) — compare deals →
-      </a>
-    </article>
-
-  </div>
-
-  <p class="disclosure"><em>Disclosure: As an Amazon Associate, we may earn from qualifying purchases.</em></p>
-</section>
-
-
-  <h2>Next steps (internal links)</h2>
-  <ul>
-    <li><a href="/guides/weatherstripping-guide.html">Weatherstripping Guide: seal leaks fast</a></li>
-    <li><a href="/guides/smart-thermostat-guide.html">Smart Thermostat Guide: features + setup that saves</a></li>
-  </ul>
-
-  <h2>FAQ</h2>
-  <h3>Do I need a professional audit?</h3>
-  <p>Not at first. A DIY audit finds the majority of “easy savings.” Consider a pro audit later if you suspect major insulation/duct issues or want blower-door testing.</p>
-
-  <h3>What’s the fastest savings?</h3>
-  <p>Air sealing + thermostat schedule + reducing standby loads usually wins for speed and cost.</p>
-
+  <!-- Structured data: FAQ -->
   <script type="application/ld+json">
   {
     "@context":"https://schema.org",
     "@type":"FAQPage",
     "mainEntity":[
-      {"@type":"Question","name":"Do I need a professional audit?","acceptedAnswer":{"@type":"Answer","text":"Not at first. A DIY audit can find most easy savings. Consider a pro audit later if you suspect major insulation/duct issues or want blower-door testing."}},
-      {"@type":"Question","name":"What’s the fastest savings?","acceptedAnswer":{"@type":"Answer","text":"Air sealing, thermostat scheduling, and reducing standby loads are typically the fastest, lowest-cost savings."}}
+      {
+        "@type":"Question",
+        "name":"How long does a DIY home energy audit take?",
+        "acceptedAnswer":{"@type":"Answer","text":"Most DIY audits take 45–90 minutes. Start by reviewing your bill, then check the biggest loads (HVAC, water heating, appliances), and finish with quick comfort fixes like air sealing."}
+      },
+      {
+        "@type":"Question",
+        "name":"What is the fastest fix that saves electricity?",
+        "acceptedAnswer":{"@type":"Answer","text":"Low-cost fixes like switching to LEDs, cutting standby power with smart plugs/power strips, and sealing obvious drafts typically pay back quickly."}
+      },
+      {
+        "@type":"Question",
+        "name":"Do I need special tools?",
+        "acceptedAnswer":{"@type":"Answer","text":"No. You can start with observation and your utility bill. A plug-in energy meter or an energy-monitoring smart plug helps you measure device usage more accurately."}
+      }
     ]
   }
   </script>
-</main>
+</head>
 
-<footer>
-  <div>© <span id="y"></span> WattWiseHub · <a href="/">Home</a></div>
-  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
-</footer>
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <span class="dot" aria-hidden="true"></span>
+          <a href="https://www.wattwisehub.com/" aria-label="WattWiseHub Home">WattWiseHub</a>
+        </div>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="https://www.wattwisehub.com/">Home</a>
+          <a href="https://www.wattwisehub.com/guides/">Guides</a>
+          <a href="https://www.wattwisehub.com/calculator.html">Calculator</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
+  <main class="container">
+    <div class="crumbs">
+      <a href="https://www.wattwisehub.com/">Home</a> › <a href="https://www.wattwisehub.com/guides/">Guides</a> › DIY Home Energy Audit
+    </div>
+
+    <article>
+      <h1>DIY Home Energy Audit (Step-by-Step)</h1>
+      <p class="subhead">Finish in about 60 minutes: find the biggest electricity wastes, prioritize fixes, and measure real savings.</p>
+
+      <div class="meta">
+        <span class="pill">Evergreen guide</span>
+        <span class="pill">Energy efficiency</span>
+        <span class="pill">Updated: 2026-02-13</span>
+      </div>
+
+      <!-- A) Quick Picks - Above the fold (high CTR) -->
+      <section class="affiliate-block quick-picks" aria-label="Quick Picks">
+        <h2>Start Cutting Electricity Waste Today</h2>
+        <p>These are practical, high-ROI tools that match the steps in this guide.</p>
+        <ul>
+          <li>
+            ⭐ <a class="btnlink" href="#AMZ_KILLAWATT_P4400" target="_blank" rel="nofollow sponsored">
+              P3 Kill A Watt P4400 — measure real kWh for plug-in devices (see today’s price →)
+            </a>
+          </li>
+          <li>
+            ⭐ <a class="btnlink" href="#AMZ_KASA_EP25" target="_blank" rel="nofollow sponsored">
+              TP-Link Kasa EP25 (Energy Monitoring Smart Plug) — find “always-on” loads fast (check price →)
+            </a>
+          </li>
+          <li>
+            ⭐ <a class="btnlink" href="#AMZ_PHILIPS_A19_ULTRADEF" target="_blank" rel="nofollow sponsored">
+              Philips Ultra Definition A19 LED (multi-pack) — fastest lighting payback (view options →)
+            </a>
+          </li>
+        </ul>
+        <p class="disclosure"><em>Disclosure: As an Amazon Associate, we may earn from qualifying purchases.</em></p>
+      </section>
+
+      <section class="toc" aria-label="Table of contents">
+        <h2>What you’ll do</h2>
+        <ul>
+          <li><a href="#step0">Step 0: Prep (5 minutes)</a></li>
+          <li><a href="#step1">Step 1: Read your bill (5 minutes)</a></li>
+          <li><a href="#step2">Step 2: Find the biggest loads (20 minutes)</a></li>
+          <li><a href="#step3">Step 3: Quick wins (20 minutes)</a></li>
+          <li><a href="#step4">Step 4: Track savings (10 minutes)</a></li>
+          <li><a href="#products">Recommended products (specific picks)</a></li>
+        </ul>
+      </section>
+
+      <section id="step0">
+        <h2>Step 0: Prep (5 minutes)</h2>
+        <p>Before you start, grab a notebook (or notes app) and do one quick setup: pick a “baseline week” where your routine is normal.</p>
+        <div class="note">
+          <strong>Goal:</strong> Identify your top 1–3 electricity wastes first. Then buy tools only if they help confirm or fix those wastes.
+        </div>
+      </section>
+
+      <section id="step1">
+        <h2>Step 1: Read your electricity bill (5 minutes)</h2>
+        <p>Look for seasonal spikes and compare usage (kWh), not just cost. If your kWh jumps in hot/cold months, HVAC is likely the biggest lever.</p>
+        <p>If you want a quick estimate of monthly cost from kWh, use our <a href="https://www.wattwisehub.com/calculator.html">electricity cost calculator</a>.</p>
+      </section>
+
+      <section id="step2">
+        <h2>Step 2: Find the biggest loads (20 minutes)</h2>
+
+        <h3>A) Heating & cooling (HVAC)</h3>
+        <p>HVAC is often the #1 driver. Note your thermostat schedule, typical setpoints, and whether rooms feel uneven (a sign of leaks/insulation issues).</p>
+
+        <h3>B) Water heating</h3>
+        <p>Long showers, high setpoints, and older water heaters can quietly dominate usage. If you have an electric water heater, this can be a major cost center.</p>
+
+        <h3>C) Appliances</h3>
+        <p>Refrigerators, dehumidifiers, and space heaters can be surprisingly expensive. If you suspect a device, measure it.</p>
+
+        <div class="affiliate-inline">
+          <strong>Measure first:</strong> If you’re guessing, you’ll buy the wrong thing.
+          Use a plug-in meter:
+          <a href="#AMZ_KILLAWATT_P4400" target="_blank" rel="nofollow sponsored">
+            P3 Kill A Watt P4400 (measure real kWh →)
+          </a>
+        </div>
+
+        <h3>D) Lighting</h3>
+        <p>Lighting is a fast win: swap the most-used bulbs first (kitchen, living room, hallway). Aim for the right brightness and color temperature for comfort.</p>
+
+        <div class="affiliate-inline">
+          <strong>Fast ROI:</strong> If you still use older bulbs, LEDs usually pay back quickly.
+          <a href="#AMZ_PHILIPS_A19_ULTRADEF" target="_blank" rel="nofollow sponsored">
+            Philips Ultra Definition A19 LED multi-pack (see options →)
+          </a>
+        </div>
+      </section>
+
+      <section id="step3">
+        <h2>Step 3: Quick wins (20 minutes)</h2>
+
+        <h3>A) Fix obvious drafts</h3>
+        <p>Air leaks make both heating and cooling work harder. Walk around doors/windows and feel for drafts.</p>
+        <p>After this guide, continue with: <a href="https://www.wattwisehub.com/guides/weatherstripping-guide.html">Weatherstripping Guide</a>.</p>
+
+        <h3>B) Control standby (“phantom”) power</h3>
+        <p>TV boxes, consoles, chargers, printers, and desktop setups often draw power even when “off”. This can add up.</p>
+
+        <!-- B) Inline rec - placed right after standby power section (high conversion) -->
+        <div class="affiliate-inline">
+          <strong>Fast win:</strong> Many bills hide in standby power.
+          An advanced power strip can cut “always-on” waste:
+          <a href="#AMZ_TRICKLESTAR_TS1006" target="_blank" rel="nofollow sponsored">
+            TrickleStar Advanced PowerStrip TS1006 (check price →)
+          </a>
+        </div>
+
+        <p>If you want device-level tracking over time, an energy-monitoring smart plug is a good “audit” upgrade.</p>
+        <div class="affiliate-inline">
+          <strong>Track it:</strong>
+          <a href="#AMZ_KASA_EP25" target="_blank" rel="nofollow sponsored">
+            TP-Link Kasa EP25 (Energy Monitoring Smart Plug) (view on Amazon →)
+          </a>
+        </div>
+
+        <h3>C) Improve HVAC control</h3>
+        <p>Schedules and temperature setbacks work best after you reduce drafts. See: <a href="https://www.wattwisehub.com/guides/smart-thermostat-guide.html">Smart Thermostat Guide</a>.</p>
+      </section>
+
+      <section id="step4">
+        <h2>Step 4: Track savings (10 minutes)</h2>
+        <p>Pick 1–2 changes and track for 7–14 days. Look for: lower kWh, shorter HVAC runtime, or reduced peaks.</p>
+        <p>Don’t change everything at once—otherwise you won’t know what actually worked.</p>
+      </section>
+
+      <hr />
+
+      <!-- C) Product cards (bottom) - replaces category placeholders -->
+      <section id="products" class="affiliate-block products" aria-label="Recommended products">
+        <h2>Recommended Products to Support Your DIY Audit</h2>
+        <p>Specific, high-conversion picks that match the steps above. Buy only after you identify your top 1–3 wastes.</p>
+
+        <div class="grid">
+          <div class="card">
+            <h3>Plug-in Energy Meter</h3>
+            <p>Best for: quick measurement (dehumidifier, space heater, fridge, PC). Simple and reliable.</p>
+            <a class="btnlink" href="#AMZ_KILLAWATT_P4400" target="_blank" rel="nofollow sponsored">
+              P3 Kill A Watt P4400 — see today’s price →
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>Energy Monitoring Smart Plug</h3>
+            <p>Best for: finding always-on loads and tracking device-level usage over time.</p>
+            <a class="btnlink" href="#AMZ_KASA_EP25" target="_blank" rel="nofollow sponsored">
+              TP-Link Kasa EP25 — check price →
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>Advanced Power Strip</h3>
+            <p>Best for: entertainment centers & desk setups; reduces standby waste automatically.</p>
+            <a class="btnlink" href="#AMZ_TRICKLESTAR_TS1006" target="_blank" rel="nofollow sponsored">
+              TrickleStar TS1006 — view on Amazon →
+            </a>
+          </div>
+
+          <div class="card">
+            <h3>LED Bulbs (Multi-pack)</h3>
+            <p>Best for: fast ROI lighting upgrades. Choose dimmable + correct color temperature.</p>
+            <a class="btnlink" href="#AMZ_PHILIPS_A19_ULTRADEF" target="_blank" rel="nofollow sponsored">
+              Philips Ultra Definition A19 — compare options →
+            </a>
+          </div>
+        </div>
+
+        <p class="disclosure"><em>Disclosure: As an Amazon Associate, we may earn from qualifying purchases.</em></p>
+      </section>
+
+      <hr />
+
+      <section aria-label="Next guides">
+        <h2>Next steps</h2>
+        <ul>
+          <li>Seal drafts efficiently: <a href="https://www.wattwisehub.com/guides/weatherstripping-guide.html">Weatherstripping Guide</a></li>
+          <li>Improve HVAC control: <a href="https://www.wattwisehub.com/guides/smart-thermostat-guide.html">Smart Thermostat Guide</a></li>
+        </ul>
+      </section>
+
+      <section aria-label="FAQ">
+        <h2>FAQ</h2>
+
+        <h3>How long does a DIY home energy audit take?</h3>
+        <p>Most DIY audits take 45–90 minutes. Focus on the biggest loads first and only measure devices that you suspect are expensive to run.</p>
+
+        <h3>What is the fastest fix that saves electricity?</h3>
+        <p>Common fast wins include switching to LEDs, reducing standby power (smart plugs/power strips), and sealing obvious drafts.</p>
+
+        <h3>Do I need special tools?</h3>
+        <p>No. You can start with observation and your utility bill. A plug-in meter or energy-monitoring smart plug helps confirm what actually costs money.</p>
+      </section>
+
+    </article>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div><strong>WattWiseHub</strong> — practical energy efficiency guides.</div>
+      <div class="footer-links">
+        <a href="https://www.wattwisehub.com/">Home</a>
+        <a href="https://www.wattwisehub.com/guides/">Guides</a>
+        <a href="https://www.wattwisehub.com/calculator.html">Calculator</a>
+      </div>
+      <div style="margin-top:10px;">
+        <em>Disclosure:</em> As an Amazon Associate, we may earn from qualifying purchases.
+      </div>
+    </div>
+  </footer>
+
+  <!--
+    Replace these placeholders with your real Amazon short links (amzn.to/xxxx):
+      #AMZ_KILLAWATT_P4400
+      #AMZ_KASA_EP25
+      #AMZ_TRICKLESTAR_TS1006
+      #AMZ_PHILIPS_A19_ULTRADEF
+  -->
 </body>
 </html>
-
-
