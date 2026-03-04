@@ -1,87 +1,325 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>Electricity Cost Calculator | WattWiseHub</title>
-<meta name="description" content="Free electricity cost calculator. Estimate appliance energy usage and monthly electricity bill instantly.">
+  <title>Electricity Cost Calculator | WattWiseHome</title>
+  <meta name="description" content="Free electricity cost calculator. Estimate appliance energy usage and monthly electricity bill instantly." />
+  <meta name="robots" content="index,follow" />
 
-<style>
-body {
-    font-family: Arial, sans-serif;
-    background: #f4f6f8;
-    text-align: center;
-    padding: 40px;
-}
+  <!-- Canonical: IMPORTANT (make this match your real URL) -->
+  <link rel="canonical" href="https://wattwisehome.com/calculator" />
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
-.container {
-    background: white;
-    max-width: 500px;
-    margin: auto;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+  <!-- Open Graph -->
+  <meta property="og:title" content="Electricity Cost Calculator | WattWiseHome" />
+  <meta property="og:description" content="Estimate daily kWh and monthly/yearly electricity cost based on watts, hours, and price per kWh." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://wattwisehome.com/calculator" />
+  <meta property="og:site_name" content="WattWiseHome" />
 
-input {
-    width: 90%;
-    padding: 10px;
-    margin: 10px;
-    font-size: 16px;
-}
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Electricity Cost Calculator | WattWiseHome" />
+  <meta name="twitter:description" content="Estimate daily kWh and monthly/yearly cost from watts, hours, and electricity price." />
 
-button {
-    padding: 12px 20px;
-    background: #0077ff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-}
+  <style>
+    :root{
+      --bg:#ffffff;
+      --page:#f4f6f8;
+      --text:#111827;
+      --muted:#6b7280;
+      --border:#e5e7eb;
+      --link:#1f6feb;
+      --shadow: 0 1px 2px rgba(0,0,0,.05);
+      --radius:12px;
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      color:var(--text);
+      background:var(--page);
+      line-height:1.6;
+    }
+    a{ color:var(--link); text-decoration:none; }
+    a:hover{ text-decoration:underline; }
 
-.result {
-    margin-top: 20px;
-    font-size: 18px;
-}
-</style>
+    header{
+      border-bottom:1px solid var(--border);
+      background:#fff;
+      position:sticky; top:0; z-index:10;
+    }
+    .container{ max-width:980px; margin:0 auto; padding:0 18px; }
+    .nav{
+      display:flex; align-items:center; justify-content:space-between;
+      padding:14px 0; gap:12px;
+    }
+    .brand{
+      display:flex; align-items:center; gap:10px;
+      font-weight:800; letter-spacing:.2px;
+    }
+    .brand .dot{ width:10px; height:10px; border-radius:50%; background:#111827; display:inline-block; }
+    .nav-links{
+      display:flex; gap:14px; flex-wrap:wrap;
+      font-size:14px;
+    }
+    .nav-links a{ color:#111827; opacity:.9; }
+    .nav-links a:hover{ opacity:1; }
+
+    main{ padding:26px 0 56px; }
+
+    .hero{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:16px;
+      box-shadow: var(--shadow);
+      padding:18px;
+    }
+    h1{ margin:0 0 6px; font-size:30px; line-height:1.2; }
+    .sub{ color:var(--muted); margin:0 0 14px; }
+
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap:12px;
+      margin-top:12px;
+    }
+    .card{
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+      padding:14px;
+    }
+
+    label{ display:block; font-size:14px; margin:10px 0 6px; color:var(--text); font-weight:600; }
+    input{
+      width:100%;
+      padding:12px 12px;
+      font-size:16px;
+      border-radius:10px;
+      border:1px solid var(--border);
+      outline:none;
+      background:#fff;
+    }
+    input:focus{ border-color:#b6cdfa; box-shadow: 0 0 0 3px rgba(31,111,235,.12); }
+
+    .actions{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      margin-top:14px;
+    }
+    button{
+      padding:12px 14px;
+      background:#111827;
+      color:white;
+      border: none;
+      cursor:pointer;
+      font-size:16px;
+      border-radius:10px;
+      font-weight:700;
+    }
+    button.secondary{
+      background:#fff;
+      color:#111827;
+      border:1px solid var(--border);
+    }
+    button:hover{ opacity:.92; }
+
+    .result{
+      margin-top:14px;
+      font-size:16px;
+      padding:12px 14px;
+      border-radius:12px;
+      border:1px solid var(--border);
+      background:#fcfcff;
+    }
+    .result strong{ display:inline-block; min-width:120px; }
+    .note{
+      color:var(--muted);
+      font-size:13px;
+      margin-top:10px;
+    }
+
+    .links{
+      margin-top:12px;
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      font-size:14px;
+    }
+
+    .faq h2{ margin:0 0 8px; font-size:18px; }
+    .faq h3{ margin:14px 0 6px; font-size:15px; }
+    .faq p{ margin:0 0 10px; color:var(--muted); }
+
+    footer{
+      border-top:1px solid var(--border);
+      background:#fff;
+      padding:22px 0 32px;
+      color:var(--muted);
+      font-size:13px;
+    }
+    .footer-links{ display:flex; gap:12px; flex-wrap:wrap; margin-top:8px; }
+  </style>
+
+  <!-- Structured data: WebApplication (calculator) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebApplication",
+    "name":"Electricity Cost Calculator",
+    "applicationCategory":"UtilitiesApplication",
+    "operatingSystem":"All",
+    "url":"https://wattwisehome.com/calculator",
+    "publisher":{"@type":"Organization","name":"WattWiseHome"},
+    "description":"Estimate daily kWh and monthly/yearly electricity cost from watts, hours, and price per kWh."
+  }
+  </script>
+
+  <!-- Structured data: FAQ (optional but helpful) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"How do I calculate electricity cost from watts?",
+        "acceptedAnswer":{"@type":"Answer","text":"Convert watts to kWh: (watts × hours) ÷ 1000. Then multiply by your electricity price per kWh to get cost."}
+      },
+      {
+        "@type":"Question",
+        "name":"What is a typical electricity price per kWh?",
+        "acceptedAnswer":{"@type":"Answer","text":"It varies by region and plan. Use the price from your utility bill. If you are unsure, start with an estimate and adjust later."}
+      },
+      {
+        "@type":"Question",
+        "name":"Why does my bill not match exactly?",
+        "acceptedAnswer":{"@type":"Answer","text":"Bills can include tiered rates, time-of-use pricing, taxes, fees, demand charges, and seasonal adjustments. This calculator gives a close estimate based on your inputs."}
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <span class="dot" aria-hidden="true"></span>
+          <a href="/" aria-label="WattWiseHome Home">WattWiseHome</a>
+        </div>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="/">Home</a>
+          <a href="/guides/">Guides</a>
+          <a href="/calculator">Calculator</a>
+        </nav>
+      </div>
+    </div>
+  </header>
 
-<div class="container">
-    <h1>Electricity Cost Calculator</h1>
+  <main class="container">
+    <section class="hero" aria-label="Calculator">
+      <h1>Electricity Cost Calculator</h1>
+      <p class="sub">
+        Estimate <strong>daily kWh</strong> and <strong>monthly/yearly cost</strong> from appliance watts, daily hours, and your electricity price.
+      </p>
 
-    <input type="number" id="watt" placeholder="Appliance Power (Watts)">
-    <input type="number" id="hours" placeholder="Hours per day">
-    <input type="number" id="price" placeholder="Electricity price per kWh (e.g. 0.12)">
+      <div class="grid" role="form" aria-label="Calculator inputs">
+        <div class="card">
+          <label for="watt">Appliance Power (Watts)</label>
+          <input type="number" id="watt" inputmode="decimal" placeholder="e.g. 1500 (space heater)" min="0" />
 
-    <br>
-    <button onclick="calculate()">Calculate</button>
+          <label for="hours">Hours per day</label>
+          <input type="number" id="hours" inputmode="decimal" placeholder="e.g. 2.5" min="0" step="0.1" />
 
-    <div class="result" id="result"></div>
-</div>
+          <label for="price">Electricity price per kWh</label>
+          <input type="number" id="price" inputmode="decimal" placeholder="e.g. 0.12" min="0" step="0.01" />
+
+          <div class="actions">
+            <button type="button" onclick="calculate()">Calculate</button>
+            <button type="button" class="secondary" onclick="resetForm()">Reset</button>
+          </div>
+
+          <div class="result" id="result" aria-live="polite">
+            Enter values above, then press <strong>Calculate</strong>.
+          </div>
+
+          <div class="note">
+            Tip: For best accuracy, measure real watts/kWh using a plug-in meter (see our guide below).
+          </div>
+
+          <div class="links">
+            <a href="/guides/diy-home-energy-audit">Start: DIY Home Energy Audit →</a>
+            <a href="/guides/best-electricity-usage-monitor-2026/">Best Electricity Usage Monitor (2026) →</a>
+          </div>
+        </div>
+
+        <div class="card faq" aria-label="How it works">
+          <h2>How it works</h2>
+          <p><strong>kWh per day</strong> = (Watts × Hours) ÷ 1000</p>
+          <p><strong>Monthly cost</strong> ≈ kWh/day × 30 × price</p>
+          <p><strong>Yearly cost</strong> ≈ kWh/day × 365 × price</p>
+
+          <h3>What to measure first</h3>
+          <p>Space heaters, dehumidifiers, old fridges, aquarium heaters, gaming PCs, and dryers are common energy hogs.</p>
+
+          <h3>Next step</h3>
+          <p>
+            Use the calculator to estimate cost, then follow our
+            <a href="/guides/diy-home-energy-audit">DIY Home Energy Audit</a>
+            to find the biggest bill drivers.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div><strong>WattWiseHome</strong> — practical energy efficiency guides.</div>
+      <div class="footer-links">
+        <a href="/">Home</a>
+        <a href="/guides/">Guides</a>
+        <a href="/calculator">Calculator</a>
+        <a href="/sitemap.xml">Sitemap</a>
+      </div>
+    </div>
+  </footer>
 
 <script>
 function calculate() {
-    let watt = document.getElementById("watt").value;
-    let hours = document.getElementById("hours").value;
-    let price = document.getElementById("price").value;
+  const watt = parseFloat(document.getElementById("watt").value);
+  const hours = parseFloat(document.getElementById("hours").value);
+  const price = parseFloat(document.getElementById("price").value);
 
-    if (!watt || !hours || !price) {
-        document.getElementById("result").innerHTML = "Please fill all fields.";
-        return;
-    }
+  const result = document.getElementById("result");
 
-    let kwhPerDay = (watt * hours) / 1000;
-    let monthly = kwhPerDay * 30 * price;
-    let yearly = kwhPerDay * 365 * price;
+  if (!isFinite(watt) || !isFinite(hours) || !isFinite(price) || watt <= 0 || hours <= 0 || price <= 0) {
+    result.innerHTML = "Please enter valid positive numbers for all fields.";
+    return;
+  }
 
-    document.getElementById("result").innerHTML =
-        "<b>Daily usage:</b> " + kwhPerDay.toFixed(2) + " kWh<br>" +
-        "<b>Monthly cost:</b> $" + monthly.toFixed(2) + "<br>" +
-        "<b>Yearly cost:</b> $" + yearly.toFixed(2);
+  const kwhPerDay = (watt * hours) / 1000;
+  const monthly = kwhPerDay * 30 * price;
+  const yearly = kwhPerDay * 365 * price;
+
+  result.innerHTML =
+    "<div><strong>Daily usage:</strong> " + kwhPerDay.toFixed(2) + " kWh</div>" +
+    "<div><strong>Monthly cost:</strong> $" + monthly.toFixed(2) + "</div>" +
+    "<div><strong>Yearly cost:</strong> $" + yearly.toFixed(2) + "</div>";
+}
+
+function resetForm(){
+  document.getElementById("watt").value = "";
+  document.getElementById("hours").value = "";
+  document.getElementById("price").value = "";
+  document.getElementById("result").innerHTML = "Enter values above, then press <strong>Calculate</strong>.";
 }
 </script>
 
