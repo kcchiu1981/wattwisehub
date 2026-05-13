@@ -5,12 +5,20 @@ from openai import OpenAI
 
 client = OpenAI(api_key=os.environ["OPENAI_API_KEY"])
 
-today = datetime.utcnow().strftime("%Y-%m-%d")
+# Current date info
+now = datetime.utcnow()
+today = now.strftime("%Y-%m-%d")
+current_year = now.year
+current_month = now.strftime("%B")
+
 draft_dir = Path("content/drafts")
 draft_dir.mkdir(parents=True, exist_ok=True)
 
-prompt = """
-You are WattHub's autonomous content agent.
+prompt = f"""
+You are WattHub's autonomous content strategist and SEO agent.
+
+Current year: {current_year}
+Current month: {current_month}
 
 Website: WattHub / WattWiseHome
 Niche: home energy efficiency
@@ -18,23 +26,31 @@ Audience: US homeowners and renters
 Goal: organic SEO traffic and affiliate revenue
 
 Task:
-1. Choose the best article topic for this week.
-2. Explain briefly why this topic is worth writing.
-3. Write a publishable SEO article draft in Markdown.
+1. Analyze what type of home energy topic is seasonally relevant right now.
+2. Choose the BEST article topic for this week.
+3. Explain briefly why this topic is strategically valuable.
+4. Write a publishable SEO article draft in Markdown.
 
-Rules:
-- Target buyer-intent or strong problem-solving keywords.
-- Avoid fake product claims.
-- Use trustworthy, practical advice.
-- Include:
-  - SEO title
-  - meta description
-  - suggested slug
-  - article body
-  - comparison table if useful
-  - FAQ
-  - internal link suggestions
-  - affiliate placement suggestions
+Content Strategy Rules:
+- Use the CURRENT YEAR dynamically when appropriate.
+- Never use outdated years.
+- Prefer evergreen + high buyer intent topics.
+- Prefer seasonally relevant topics.
+- Avoid duplicate topics already commonly found on WattHub.
+- Focus on practical consumer problems and energy savings.
+- Use realistic product categories and home improvement scenarios.
+- Avoid fake claims or exaggerated savings.
+
+Include:
+- SEO title
+- Meta description
+- Suggested URL slug
+- Introduction
+- Article body
+- Comparison table if useful
+- FAQ section
+- Internal link suggestions
+- Affiliate placement suggestions
 
 Output in Markdown only.
 """
