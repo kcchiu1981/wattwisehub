@@ -1,3 +1,4 @@
+```html
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,134 +6,524 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>How to Improve Home Energy Efficiency in 2026 | WattWiseHome</title>
   <meta name="description" content="A practical 2026 home energy efficiency checklist for reducing waste, improving comfort, and lowering electricity costs.">
-  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    :root{
+      --bg:#ffffff;
+      --text:#111827;
+      --muted:#6b7280;
+      --border:#e5e7eb;
+      --card:#fafafa;
+      --link:#1f6feb;
+      --shadow:0 1px 2px rgba(0,0,0,.05);
+      --radius:12px;
+    }
+
+    *{box-sizing:border-box;}
+
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.65;
+    }
+
+    a{
+      color:var(--link);
+      text-decoration:none;
+    }
+
+    a:hover{
+      text-decoration:underline;
+    }
+
+    header{
+      border-bottom:1px solid var(--border);
+      background:#fff;
+      position:sticky;
+      top:0;
+      z-index:10;
+    }
+
+    .container{
+      max-width:980px;
+      margin:0 auto;
+      padding:0 18px;
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding:14px 0;
+      gap:12px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight:800;
+      letter-spacing:.2px;
+    }
+
+    .brand .dot{
+      width:10px;
+      height:10px;
+      border-radius:50%;
+      background:#111827;
+      display:inline-block;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      font-size:14px;
+    }
+
+    .nav-links a{
+      color:#111827;
+      opacity:.9;
+    }
+
+    .nav-links a:hover{
+      opacity:1;
+    }
+
+    main{
+      padding:28px 0 56px;
+    }
+
+    .crumbs{
+      font-size:13px;
+      color:var(--muted);
+      margin:8px 0 12px;
+    }
+
+    .crumbs a{
+      color:var(--muted);
+    }
+
+    h1{
+      line-height:1.2;
+      margin:10px 0 6px;
+      font-size:34px;
+    }
+
+    h2{
+      margin-top:32px;
+      line-height:1.3;
+    }
+
+    h3{
+      margin-top:22px;
+    }
+
+    .subhead{
+      color:var(--muted);
+      margin:0 0 18px;
+      font-size:18px;
+    }
+
+    .meta{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:13px;
+      margin:0 0 22px;
+    }
+
+    .pill{
+      border:1px solid var(--border);
+      padding:4px 10px;
+      border-radius:999px;
+      background:#fff;
+    }
+
+    .toc,
+    .calculator-cta,
+    .next-guide{
+      border:1px solid var(--border);
+      background:#fff;
+      border-radius:var(--radius);
+      padding:16px;
+      box-shadow:var(--shadow);
+      margin:18px 0 24px;
+    }
+
+    .toc h2,
+    .calculator-cta h2,
+    .next-guide h2{
+      margin-top:0;
+      font-size:18px;
+    }
+
+    .disclosure{
+      border-left:4px solid var(--border);
+      background:#fcfcfc;
+      padding:12px 14px;
+      border-radius:10px;
+      font-size:13px;
+      color:var(--muted);
+      margin:18px 0;
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      margin:16px 0 24px;
+      font-size:14px;
+    }
+
+    th,td{
+      border:1px solid var(--border);
+      padding:10px;
+      vertical-align:top;
+    }
+
+    th{
+      background:#fafafa;
+      text-align:left;
+    }
+
+    ul,ol{
+      padding-left:22px;
+    }
+
+    footer{
+      border-top:1px solid var(--border);
+      padding:22px 0 32px;
+      color:var(--muted);
+      font-size:13px;
+      background:#fff;
+      margin-top:40px;
+    }
+
+    .footer-links{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-top:8px;
+    }
+
+    @media (max-width: 640px){
+      h1{
+        font-size:28px;
+      }
+
+      .nav{
+        flex-direction:column;
+        align-items:flex-start;
+      }
+    }
+  </style>
 </head>
+
 <body>
-<main class="article">
-  <h1>How to Improve Home Energy Efficiency in 2026</h1>
 
-  <p class="meta">Updated May 14, 2026 · <a href="../index.html#guides">Guides</a> · Read time: ~7–9 minutes</p>
+<header>
+  <div class="container">
+    <div class="nav">
+      <div class="brand">
+        <span class="dot" aria-hidden="true"></span>
+        <a href="/">WattWiseHome</a>
+      </div>
 
-  <section class="quick-nav">
-    <h2>Quick Navigation</h2>
-    <ol>
-      <li><a href="#quick-wins">Quick wins</a></li>
-      <li><a href="#priority-upgrades">Priority upgrades</a></li>
-      <li><a href="#renters">Tips for renters</a></li>
-      <li><a href="#faq">FAQ</a></li>
-    </ol>
-  </section>
+      <nav class="nav-links">
+        <a href="/">Home</a>
+        <a href="/guides/">Guides</a>
+        <a href="/calculator">Calculator</a>
+      </nav>
+    </div>
+  </div>
+</header>
 
-  <p class="disclosure">
-    Disclosure: As an Amazon Associate, WattWiseHome may earn from qualifying purchases. Product links should be verified before publishing.
-  </p>
+<main class="container">
 
-  <section class="calculator-cta">
-    <h2>Want a quick estimate of appliance cost?</h2>
-    <p>Use our calculator to estimate how much an appliance costs to run per day/month based on watts and local electricity price.</p>
-    <p><a class="button" href="../calculator.html">Open Electricity Cost Calculator →</a></p>
-  </section>
+  <div class="crumbs">
+    <a href="/">Home</a> ›
+    <a href="/guides/">Guides</a> ›
+    Home Energy Efficiency
+  </div>
 
-  <section id="quick-wins">
-    <h2>Quick wins for better home energy efficiency</h2>
-    <p>Improving home energy efficiency does not always mean buying expensive equipment. The best first step is to find where your home wastes energy, then fix the biggest leaks first.</p>
+  <article>
 
-    <ul>
-      <li>Seal drafts around doors, windows, and attic access points.</li>
-      <li>Replace high-use bulbs with LEDs.</li>
-      <li>Use smart thermostat schedules instead of constant manual adjustments.</li>
-      <li>Measure high-use appliances with a plug-in electricity monitor.</li>
-      <li>Reduce standby power from entertainment centers, chargers, and office equipment.</li>
-    </ul>
-  </section>
+    <h1>How to Improve Home Energy Efficiency in 2026</h1>
 
-  <section id="priority-upgrades">
-    <h2>Priority upgrades: what to fix first</h2>
+    <p class="subhead">
+      Practical ways to reduce electricity waste, improve comfort, and prioritize the upgrades that actually matter.
+    </p>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Upgrade</th>
-          <th>Best for</th>
-          <th>Effort</th>
-          <th>Why it helps</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Weatherstripping</td>
-          <td>Drafty doors and windows</td>
-          <td>Low</td>
-          <td>Reduces unwanted air leaks and improves comfort.</td>
-        </tr>
-        <tr>
-          <td>Smart thermostat schedule</td>
-          <td>Central HVAC homes</td>
-          <td>Low–medium</td>
-          <td>Reduces unnecessary heating and cooling runtime.</td>
-        </tr>
-        <tr>
-          <td>Plug-in electricity monitor</td>
-          <td>Finding appliance energy hogs</td>
-          <td>Low</td>
-          <td>Shows real kWh use so you stop guessing.</td>
-        </tr>
-        <tr>
-          <td>Insulation improvements</td>
-          <td>Hot attics, cold rooms, uneven comfort</td>
-          <td>Medium–high</td>
-          <td>Reduces heat transfer and HVAC workload.</td>
-        </tr>
-      </tbody>
-    </table>
-  </section>
+    <div class="meta">
+      <span class="pill">Energy efficiency</span>
+      <span class="pill">Home upgrades</span>
+      <span class="pill">Updated: 2026-05-14</span>
+    </div>
 
-  <section>
-    <h2>1) Start with an energy audit</h2>
-    <p>Before buying devices, walk through your home and look for the most obvious waste: air leaks, long HVAC runtime, older appliances, always-on electronics, and rooms that are difficult to heat or cool.</p>
-    <p>Next: <a href="./diy-home-energy-audit.html">Read the DIY Home Energy Audit Guide →</a></p>
-  </section>
+    <section class="toc">
+      <h2>Quick Navigation</h2>
 
-  <section>
-    <h2>2) Seal air leaks before upgrading equipment</h2>
-    <p>Draft sealing is often one of the best early improvements because it can improve comfort immediately. Focus on exterior doors, window frames, attic hatches, and visible gaps first.</p>
-    <p>Related: <a href="./weatherstripping-guide.html">Weatherstripping Guide →</a></p>
-  </section>
+      <ol>
+        <li><a href="#quick-wins">Quick wins</a></li>
+        <li><a href="#priority-upgrades">Priority upgrades</a></li>
+        <li><a href="#audit">Start with an audit</a></li>
+        <li><a href="#renters">Tips for renters</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ol>
+    </section>
 
-  <section>
-    <h2>3) Use thermostat settings carefully</h2>
-    <p>A smart thermostat can help when the schedule matches your real routine. Avoid extreme temperature swings and focus on reducing runtime when no one is home.</p>
-    <p>Related: <a href="./smart-thermostat-guide.html">Smart Thermostat Guide →</a></p>
-  </section>
+    <p class="disclosure">
+      Disclosure: As an Amazon Associate, WattWiseHome may earn from qualifying purchases. Product recommendations should always be verified before publishing.
+    </p>
 
-  <section id="renters">
-    <h2>Best energy efficiency tips for renters</h2>
-    <p>Renters should focus on reversible fixes: foam weatherstripping tape, draft stoppers, LED bulbs, smart plugs, curtains, and basic appliance monitoring. Avoid permanent changes without landlord approval.</p>
-  </section>
+    <section class="calculator-cta">
+      <h2>Estimate appliance electricity cost</h2>
 
-  <section id="faq">
-    <h2>FAQ</h2>
+      <p>
+        Want to estimate how much a device costs to run?
+        Use our electricity calculator to estimate daily or monthly operating cost.
+      </p>
 
-    <h3>What is the best first step to improve home energy efficiency?</h3>
-    <p>Start with a basic home energy audit. It helps you find the largest waste before spending money on upgrades.</p>
+      <p>
+        <a href="/calculator">
+          Open Electricity Cost Calculator →
+        </a>
+      </p>
+    </section>
 
-    <h3>Are smart thermostats worth it?</h3>
-    <p>They can be worth it for homes with central HVAC and predictable schedules. If your biggest problem is air leakage or poor insulation, fix that first.</p>
+    <section id="quick-wins">
+      <h2>Quick wins for better home energy efficiency</h2>
 
-    <h3>What can renters do?</h3>
-    <p>Renters can usually start with LED bulbs, draft stoppers, removable weatherstripping, smart plugs, and better appliance habits.</p>
-  </section>
+      <p>
+        The fastest energy savings usually come from reducing waste first,
+        not from buying expensive equipment immediately.
+      </p>
 
-  <section class="next-guide">
-    <h2>Next: find what is using the most electricity</h2>
-    <p>If your bill is high, measure real appliance usage instead of guessing.</p>
-    <p><a href="./best-electricity-usage-monitor-2026.html">Read: Best Electricity Usage Monitor for Home →</a></p>
-  </section>
+      <ul>
+        <li>Seal drafts around doors and windows.</li>
+        <li>Replace the most-used bulbs with LEDs.</li>
+        <li>Reduce standby power from entertainment devices.</li>
+        <li>Optimize thermostat schedules instead of constant manual changes.</li>
+        <li>Measure suspicious appliances before replacing them.</li>
+      </ul>
+    </section>
+
+    <section id="priority-upgrades">
+      <h2>Priority upgrades: what to fix first</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Upgrade</th>
+            <th>Best for</th>
+            <th>Effort</th>
+            <th>Why it helps</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>Weatherstripping</td>
+            <td>Drafty doors and windows</td>
+            <td>Low</td>
+            <td>Improves comfort and reduces HVAC waste.</td>
+          </tr>
+
+          <tr>
+            <td>LED lighting</td>
+            <td>High-use rooms</td>
+            <td>Low</td>
+            <td>Fast payback with lower electricity use.</td>
+          </tr>
+
+          <tr>
+            <td>Smart thermostat scheduling</td>
+            <td>Central HVAC systems</td>
+            <td>Low–medium</td>
+            <td>Reduces unnecessary heating and cooling runtime.</td>
+          </tr>
+
+          <tr>
+            <td>Plug-in electricity monitor</td>
+            <td>Finding energy hogs</td>
+            <td>Low</td>
+            <td>Shows real device electricity use.</td>
+          </tr>
+
+          <tr>
+            <td>Insulation improvements</td>
+            <td>Uneven room temperatures</td>
+            <td>Medium–high</td>
+            <td>Reduces heat transfer and HVAC workload.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section id="audit">
+      <h2>Start with a home energy audit</h2>
+
+      <p>
+        Before replacing appliances or buying smart-home gear,
+        walk through your home and identify the biggest sources of waste first.
+      </p>
+
+      <p>
+        Look for:
+      </p>
+
+      <ul>
+        <li>Drafts near exterior doors and windows</li>
+        <li>Rooms that are hard to cool or heat</li>
+        <li>Older appliances with long runtime</li>
+        <li>Always-on electronics and chargers</li>
+        <li>High summer or winter electricity spikes</li>
+      </ul>
+
+      <p>
+        Related guide:
+        <a href="/guides/diy-home-energy-audit">
+          DIY Home Energy Audit →
+        </a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Seal air leaks before upgrading equipment</h2>
+
+      <p>
+        Draft sealing is one of the best low-cost improvements because it improves comfort immediately and helps your HVAC system work less.
+      </p>
+
+      <p>
+        Focus on:
+      </p>
+
+      <ul>
+        <li>Exterior doors</li>
+        <li>Window frames</li>
+        <li>Attic hatches</li>
+        <li>Visible wall penetrations</li>
+      </ul>
+
+      <p>
+        Related:
+        <a href="/guides/weatherstripping-guide">
+          Weatherstripping Guide →
+        </a>
+      </p>
+    </section>
+
+    <section>
+      <h2>Use thermostat settings carefully</h2>
+
+      <p>
+        Smart thermostats can help reduce runtime,
+        but only when schedules match your real routine.
+      </p>
+
+      <p>
+        Avoid extreme temperature swings and focus on reducing HVAC runtime when nobody is home.
+      </p>
+
+      <p>
+        Related:
+        <a href="/guides/smart-thermostat-guide">
+          Smart Thermostat Guide →
+        </a>
+      </p>
+    </section>
+
+    <section id="renters">
+      <h2>Best energy efficiency tips for renters</h2>
+
+      <p>
+        Renters should prioritize reversible and low-risk improvements:
+      </p>
+
+      <ul>
+        <li>Foam weatherstripping tape</li>
+        <li>Draft stoppers</li>
+        <li>LED bulbs</li>
+        <li>Smart plugs</li>
+        <li>Curtains and thermal blinds</li>
+      </ul>
+
+      <p>
+        Avoid permanent changes unless approved by the property owner.
+      </p>
+    </section>
+
+    <section id="faq">
+      <h2>FAQ</h2>
+
+      <h3>What is the best first step to improve home energy efficiency?</h3>
+
+      <p>
+        Start with a simple energy audit.
+        Identifying the largest waste first prevents unnecessary purchases.
+      </p>
+
+      <h3>Are smart thermostats worth it?</h3>
+
+      <p>
+        They can help in homes with central HVAC and predictable schedules,
+        especially after drafts and insulation issues are addressed.
+      </p>
+
+      <h3>What can renters do without major renovations?</h3>
+
+      <p>
+        Renters can often improve efficiency with LED bulbs, draft sealing, smart plugs, curtains, and appliance monitoring.
+      </p>
+    </section>
+
+    <section class="next-guide">
+      <h2>Next: measure what actually uses electricity</h2>
+
+      <p>
+        Instead of guessing, measure real device power usage.
+      </p>
+
+      <p>
+        <a href="/guides/best-electricity-usage-monitor-2026">
+          Read: Best Electricity Usage Monitor for Home →
+        </a>
+      </p>
+    </section>
+
+  </article>
+
 </main>
 
 <footer>
-  <p>WattWiseHome — Practical energy-saving guides for real homes.</p>
-  <p>Affiliate disclosure: We may earn commissions from qualifying purchases at no extra cost to you.</p>
+  <div class="container">
+
+    <div>
+      <strong>WattWiseHome</strong> — practical energy efficiency guides.
+    </div>
+
+    <div class="footer-links">
+      <a href="/">Home</a>
+      <a href="/guides/">Guides</a>
+      <a href="/calculator">Calculator</a>
+    </div>
+
+    <div style="margin-top:10px;">
+      <em>Disclosure:</em> As an Amazon Associate, we may earn from qualifying purchases.
+    </div>
+
+  </div>
 </footer>
+
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516"
+integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg=="
+data-cf-beacon='{"version":"2024.11.0","token":"cbdf2ebbe9bf4b088760d0e65fbab423","r":1}'
+crossorigin="anonymous"></script>
+
 </body>
 </html>
+```
